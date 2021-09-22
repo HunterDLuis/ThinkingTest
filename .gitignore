@@ -6,6 +6,9 @@ gradlew
 gradlew.bat
 settings.gradle
 .idea/misc.xml
+.allure
+logs
+build
 =======
 # Default ignored files
 /shelf/
