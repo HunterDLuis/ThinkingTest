@@ -24,6 +24,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Post add user response 201")
     @Description("Verify that the user receives status code 201 when their register is successful.")
     @Story("Add User")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-1\n")
     public void addUserSuccessfullyTest(){
         UserRequest userRequest = new UserRequest("Luis35", "Villa35", "luis35@gmail.com", "myPassword");
 
@@ -43,6 +44,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Post add user response 400")
     @Description("Verify that the user receive status code 400 when user register with mandatory fields empty")
     @Story("Add User")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-2")
     public void matchMessageAndStatusCode400WhenMandatoryFieldsEmptyTest(){
         UserRequest userRequest = new UserRequest();
 
@@ -62,6 +64,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Post add user - verify firstName")
     @Description("Verify that the json response contains the same firstName that the user registered ")
     @Story("Add User")
+    @TmsLink("")
     public void matchFirsNameWhenAddUserSuccessfullyTest(){
         UserRequest userRequest = new UserRequest("Luis35", "Villa35", "luis35@gmail.com", "myPassword");
 
@@ -81,6 +84,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Post login user with valid credentials")
     @Description("Verify that user receives a status code 200  when request login with valid Credentials")
     @Story("Login User")
+    @TmsLink("")
     public void loginUserWithValidCredentialsTest(){
         PostLoginUserRequest loginUserRequest = new  PostLoginUserRequest("luis35@gmail.com", "myPassword");
         Response responseLoginUser = genericPostLoginUserRequest(loginUserRequest, "users/login");
@@ -94,6 +98,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Post login user with invalid credentials")
     @Description("Verify that user receives a status code 401 when request login with invalid Credentials")
     @Story("Login User")
+    @TmsLink("")
     public void loginUserWithInvalidCredentialsTest(){
         PostLoginUserRequest loginUserRequest = new PostLoginUserRequest("luis351@gmail.com", "myPassword");
         Response responseLoginUser = genericPostLoginUserRequest(loginUserRequest, "users/login");
@@ -107,6 +112,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Post login user - Verify user email")
     @Description("Verify that Json response contains the same email  that the user entered.")
     @Story("Login User")
+    @TmsLink("")
     public void verifyEmailWithValidCredentialsTest(){
         PostLoginUserRequest loginUserRequest = new PostLoginUserRequest("luis35@gmail.com", "myPassword");
 
