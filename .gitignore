@@ -1,3 +1,5 @@
+/logs
+.allure
 .gradle
 .idea
 gradle
