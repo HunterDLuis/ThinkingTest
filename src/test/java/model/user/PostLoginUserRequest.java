@@ -1,13 +1,13 @@
 package model.user;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Builder
-@Getter
-@Setter
+@Data
+@RequiredArgsConstructor
+@NoArgsConstructor
 public class PostLoginUserRequest{
+	@NonNull
 	private String email;
+	@NonNull
 	private String password;
 }
