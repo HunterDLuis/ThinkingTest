@@ -1,0 +1,84 @@
+{
+  "uid" : "340c11ec911e150d",
+  "name" : "Delete User - Status code 401 whit empty token",
+  "fullName" : "ThinkingTest.deleteUserWhitEmptyTokenTest",
+  "historyId" : "674e10eddb2c0bff92a86c6d0cd9dffa",
+  "time" : {
+    "start" : 1632411601084,
+    "stop" : 1632411601771,
+    "duration" : 687
+  },
+  "description" : "Verify that the user receives status code 401 when sends DELETE user request with empty token",
+  "descriptionHtml" : "<p>Verify that the user receives status code 401 when sends DELETE user request with empty token</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Verify that the user receives status code 401 when sends DELETE user request with empty token",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "7d788ff0fed7c8c",
+      "name" : "Request",
+      "source" : "7d788ff0fed7c8c.html",
+      "type" : "text/html",
+      "size" : 381
+    }, {
+      "uid" : "327a67b658b3c57f",
+      "name" : "HTTP/1.1 401 Unauthorized",
+      "source" : "327a67b658b3c57f.html",
+      "type" : "text/html",
+      "size" : 579
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 2,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "ThinkingTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "deleteUserWhitEmptyTokenTest"
+  }, {
+    "name" : "suite",
+    "value" : "ThinkingTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-756TKQ1"
+  }, {
+    "name" : "thread",
+    "value" : "3480@DESKTOP-756TKQ1.Test worker(13)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Delete user"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "340c11ec911e150d.json",
+  "parameterValues" : [ ]
+}

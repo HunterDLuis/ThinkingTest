@@ -1,0 +1,464 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "ThinkingTest",
+    "children" : [ {
+      "name" : "Statud code 200 when updated a contact",
+      "uid" : "9c11c11e28e37c36",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411512843,
+        "stop" : 1632411526578,
+        "duration" : 13735
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Session number in contact is integer",
+      "uid" : "1635e73ab03a350d",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411526631,
+        "stop" : 1632411528276,
+        "duration" : 1645
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Get user with invalid token",
+      "uid" : "1f620cf39c8bc546",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411528288,
+        "stop" : 1632411529748,
+        "duration" : 1460
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Post add user - verify firstName",
+      "uid" : "b8ab1d87f9fde6d",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "failed",
+      "time" : {
+        "start" : 1632411529757,
+        "stop" : 1632411530639,
+        "duration" : 882
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Status code 200 when use valid token",
+      "uid" : "a3189d0639a8a410",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411530673,
+        "stop" : 1632411532152,
+        "duration" : 1479
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Filter contact list",
+      "uid" : "87f9345cfd83ba64",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411532156,
+        "stop" : 1632411533823,
+        "duration" : 1667
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Match user first name with valid token",
+      "uid" : "5bfcd98a60f833cd",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411533828,
+        "stop" : 1632411535431,
+        "duration" : 1603
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Error message when send invalid token",
+      "uid" : "dd5d8e961a34c87f",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411535435,
+        "stop" : 1632411537667,
+        "duration" : 2232
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Status code 400 when invalid id",
+      "uid" : "2031eea7cf74c1bd",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411537672,
+        "stop" : 1632411540080,
+        "duration" : 2408
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Receives error message when send token empty",
+      "uid" : "ead331ca7b0f6d8b",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411540083,
+        "stop" : 1632411540728,
+        "duration" : 645
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Response json is not null",
+      "uid" : "de57b4eee197e715",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411540731,
+        "stop" : 1632411542237,
+        "duration" : 1506
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Error message when send invalid token",
+      "uid" : "49c89e8f561fd4d8",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411542241,
+        "stop" : 1632411544129,
+        "duration" : 1888
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Delete contact- Status code 503 whit empty id",
+      "uid" : "af9b6e1b3d1f0a4d",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411544135,
+        "stop" : 1632411576734,
+        "duration" : 32599
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Status code 401 when send invalid token",
+      "uid" : "901ee4d671035729",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411576742,
+        "stop" : 1632411578369,
+        "duration" : 1627
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Post login user with invalid credentials",
+      "uid" : "5e235e3428aecd4c",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411578371,
+        "stop" : 1632411579045,
+        "duration" : 674
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Delete User - Status code 401 whit a invalid token",
+      "uid" : "1552fb4e5a44bcf6",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411579066,
+        "stop" : 1632411580680,
+        "duration" : 1614
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Error message and status code 400 when mandatory fields empty",
+      "uid" : "b0c3a49e03f2b54a",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411580891,
+        "stop" : 1632411582508,
+        "duration" : 1617
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Response json contain the same birthdate",
+      "uid" : "7fdd795ee249f54f",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411582516,
+        "stop" : 1632411584028,
+        "duration" : 1512
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Response status code 200 with valid token",
+      "uid" : "2543bd089cec06c0",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411584033,
+        "stop" : 1632411585399,
+        "duration" : 1366
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Status code 200 when update user first name",
+      "uid" : "dbc5145ca3426c2f",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411585402,
+        "stop" : 1632411586868,
+        "duration" : 1466
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Delete contact - Status code 200 whit valid id",
+      "uid" : "ca89184737c77b3b",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411586873,
+        "stop" : 1632411589077,
+        "duration" : 2204
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Delete contact - Status code 401 whit invalid token",
+      "uid" : "c41e23751cd7aeb7",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411589083,
+        "stop" : 1632411592060,
+        "duration" : 2977
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Get user with valid token",
+      "uid" : "97fe3069a9dc8f76",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411592064,
+        "stop" : 1632411593419,
+        "duration" : 1355
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Post add user response 400",
+      "uid" : "b202d487e63cad3e",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411593422,
+        "stop" : 1632411594063,
+        "duration" : 641
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Response status code 401 with invalid token",
+      "uid" : "e5a51e448587e63a",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411594072,
+        "stop" : 1632411595416,
+        "duration" : 1344
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Status code 401 when token is empty",
+      "uid" : "636e86406957dd66",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411595422,
+        "stop" : 1632411597547,
+        "duration" : 2125
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Error message when use token empty",
+      "uid" : "f7d86db93d9f48db",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411597550,
+        "stop" : 1632411598247,
+        "duration" : 697
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Delete contact - Status code 401 whit valid id",
+      "uid" : "e34ce9e1a064fcb3",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411598249,
+        "stop" : 1632411600259,
+        "duration" : 2010
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Post login user with valid credentials",
+      "uid" : "ab605fd3e50f29ab",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411600265,
+        "stop" : 1632411601073,
+        "duration" : 808
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Delete User - Status code 401 whit empty token",
+      "uid" : "340c11ec911e150d",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411601084,
+        "stop" : 1632411601771,
+        "duration" : 687
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Post add user response 201",
+      "uid" : "6dd7930db0a8b5ec",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "failed",
+      "time" : {
+        "start" : 1632411601775,
+        "stop" : 1632411602492,
+        "duration" : 717
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Status code 401 when use invalid token",
+      "uid" : "1a2451a36896d4c",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411602502,
+        "stop" : 1632411603906,
+        "duration" : 1404
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Add contact successfully",
+      "uid" : "f14d0cbed87bd3d1",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411603909,
+        "stop" : 1632411605650,
+        "duration" : 1741
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Delete User - Status code 200 whit a valid token",
+      "uid" : "19bc3e0b6272005",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411605654,
+        "stop" : 1632411607360,
+        "duration" : 1706
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Post login user - Verify user email",
+      "uid" : "c490477638357f50",
+      "parentUid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632411607369,
+        "stop" : 1632411608244,
+        "duration" : 875
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "c4e7bb1d58d6dbd0b629da16c83f2d87"
+  } ]
+}

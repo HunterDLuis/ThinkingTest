@@ -1,0 +1,351 @@
+[ {
+  "uid" : "901ee4d671035729",
+  "name" : "Status code 401 when send invalid token",
+  "time" : {
+    "start" : 1632411576742,
+    "stop" : 1632411578369,
+    "duration" : 1627
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1635e73ab03a350d",
+  "name" : "Session number in contact is integer",
+  "time" : {
+    "start" : 1632411526631,
+    "stop" : 1632411528276,
+    "duration" : 1645
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6dd7930db0a8b5ec",
+  "name" : "Post add user response 201",
+  "time" : {
+    "start" : 1632411601775,
+    "stop" : 1632411602492,
+    "duration" : 717
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "49c89e8f561fd4d8",
+  "name" : "Error message when send invalid token",
+  "time" : {
+    "start" : 1632411542241,
+    "stop" : 1632411544129,
+    "duration" : 1888
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9c11c11e28e37c36",
+  "name" : "Statud code 200 when updated a contact",
+  "time" : {
+    "start" : 1632411512843,
+    "stop" : 1632411526578,
+    "duration" : 13735
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e34ce9e1a064fcb3",
+  "name" : "Delete contact - Status code 401 whit valid id",
+  "time" : {
+    "start" : 1632411598249,
+    "stop" : 1632411600259,
+    "duration" : 2010
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ab605fd3e50f29ab",
+  "name" : "Post login user with valid credentials",
+  "time" : {
+    "start" : 1632411600265,
+    "stop" : 1632411601073,
+    "duration" : 808
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1f620cf39c8bc546",
+  "name" : "Get user with invalid token",
+  "time" : {
+    "start" : 1632411528288,
+    "stop" : 1632411529748,
+    "duration" : 1460
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "de57b4eee197e715",
+  "name" : "Response json is not null",
+  "time" : {
+    "start" : 1632411540731,
+    "stop" : 1632411542237,
+    "duration" : 1506
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f7d86db93d9f48db",
+  "name" : "Error message when use token empty",
+  "time" : {
+    "start" : 1632411597550,
+    "stop" : 1632411598247,
+    "duration" : 697
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "19bc3e0b6272005",
+  "name" : "Delete User - Status code 200 whit a valid token",
+  "time" : {
+    "start" : 1632411605654,
+    "stop" : 1632411607360,
+    "duration" : 1706
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1a2451a36896d4c",
+  "name" : "Status code 401 when use invalid token",
+  "time" : {
+    "start" : 1632411602502,
+    "stop" : 1632411603906,
+    "duration" : 1404
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c41e23751cd7aeb7",
+  "name" : "Delete contact - Status code 401 whit invalid token",
+  "time" : {
+    "start" : 1632411589083,
+    "stop" : 1632411592060,
+    "duration" : 2977
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b8ab1d87f9fde6d",
+  "name" : "Post add user - verify firstName",
+  "time" : {
+    "start" : 1632411529757,
+    "stop" : 1632411530639,
+    "duration" : 882
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "5bfcd98a60f833cd",
+  "name" : "Match user first name with valid token",
+  "time" : {
+    "start" : 1632411533828,
+    "stop" : 1632411535431,
+    "duration" : 1603
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7fdd795ee249f54f",
+  "name" : "Response json contain the same birthdate",
+  "time" : {
+    "start" : 1632411582516,
+    "stop" : 1632411584028,
+    "duration" : 1512
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2031eea7cf74c1bd",
+  "name" : "Status code 400 when invalid id",
+  "time" : {
+    "start" : 1632411537672,
+    "stop" : 1632411540080,
+    "duration" : 2408
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "af9b6e1b3d1f0a4d",
+  "name" : "Delete contact- Status code 503 whit empty id",
+  "time" : {
+    "start" : 1632411544135,
+    "stop" : 1632411576734,
+    "duration" : 32599
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dbc5145ca3426c2f",
+  "name" : "Status code 200 when update user first name",
+  "time" : {
+    "start" : 1632411585402,
+    "stop" : 1632411586868,
+    "duration" : 1466
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "97fe3069a9dc8f76",
+  "name" : "Get user with valid token",
+  "time" : {
+    "start" : 1632411592064,
+    "stop" : 1632411593419,
+    "duration" : 1355
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5e235e3428aecd4c",
+  "name" : "Post login user with invalid credentials",
+  "time" : {
+    "start" : 1632411578371,
+    "stop" : 1632411579045,
+    "duration" : 674
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b0c3a49e03f2b54a",
+  "name" : "Error message and status code 400 when mandatory fields empty",
+  "time" : {
+    "start" : 1632411580891,
+    "stop" : 1632411582508,
+    "duration" : 1617
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1552fb4e5a44bcf6",
+  "name" : "Delete User - Status code 401 whit a invalid token",
+  "time" : {
+    "start" : 1632411579066,
+    "stop" : 1632411580680,
+    "duration" : 1614
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e5a51e448587e63a",
+  "name" : "Response status code 401 with invalid token",
+  "time" : {
+    "start" : 1632411594072,
+    "stop" : 1632411595416,
+    "duration" : 1344
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "636e86406957dd66",
+  "name" : "Status code 401 when token is empty",
+  "time" : {
+    "start" : 1632411595422,
+    "stop" : 1632411597547,
+    "duration" : 2125
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dd5d8e961a34c87f",
+  "name" : "Error message when send invalid token",
+  "time" : {
+    "start" : 1632411535435,
+    "stop" : 1632411537667,
+    "duration" : 2232
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ead331ca7b0f6d8b",
+  "name" : "Receives error message when send token empty",
+  "time" : {
+    "start" : 1632411540083,
+    "stop" : 1632411540728,
+    "duration" : 645
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b202d487e63cad3e",
+  "name" : "Post add user response 400",
+  "time" : {
+    "start" : 1632411593422,
+    "stop" : 1632411594063,
+    "duration" : 641
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c490477638357f50",
+  "name" : "Post login user - Verify user email",
+  "time" : {
+    "start" : 1632411607369,
+    "stop" : 1632411608244,
+    "duration" : 875
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "87f9345cfd83ba64",
+  "name" : "Filter contact list",
+  "time" : {
+    "start" : 1632411532156,
+    "stop" : 1632411533823,
+    "duration" : 1667
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a3189d0639a8a410",
+  "name" : "Status code 200 when use valid token",
+  "time" : {
+    "start" : 1632411530673,
+    "stop" : 1632411532152,
+    "duration" : 1479
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ca89184737c77b3b",
+  "name" : "Delete contact - Status code 200 whit valid id",
+  "time" : {
+    "start" : 1632411586873,
+    "stop" : 1632411589077,
+    "duration" : 2204
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2543bd089cec06c0",
+  "name" : "Response status code 200 with valid token",
+  "time" : {
+    "start" : 1632411584033,
+    "stop" : 1632411585399,
+    "duration" : 1366
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f14d0cbed87bd3d1",
+  "name" : "Add contact successfully",
+  "time" : {
+    "start" : 1632411603909,
+    "stop" : 1632411605650,
+    "duration" : 1741
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "340c11ec911e150d",
+  "name" : "Delete User - Status code 401 whit empty token",
+  "time" : {
+    "start" : 1632411601084,
+    "stop" : 1632411601771,
+    "duration" : 687
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

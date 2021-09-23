@@ -1,0 +1,84 @@
+{
+  "uid" : "b202d487e63cad3e",
+  "name" : "Post add user response 400",
+  "fullName" : "ThinkingTest.matchMessageAndStatusCode400WhenMandatoryFieldsEmptyTest",
+  "historyId" : "782a7bb8824d2499aa627dbab46ad13a",
+  "time" : {
+    "start" : 1632411593422,
+    "stop" : 1632411594063,
+    "duration" : 641
+  },
+  "description" : "Verify that the user receive status code 400 when user register with mandatory fields empty",
+  "descriptionHtml" : "<p>Verify that the user receive status code 400 when user register with mandatory fields empty</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Verify that the user receive status code 400 when user register with mandatory fields empty",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "c7c03828bed006e4",
+      "name" : "Request",
+      "source" : "c7c03828bed006e4.html",
+      "type" : "text/html",
+      "size" : 719
+    }, {
+      "uid" : "b9cea00a931e94bf",
+      "name" : "HTTP/1.1 400 Bad Request",
+      "source" : "b9cea00a931e94bf.html",
+      "type" : "text/html",
+      "size" : 3414
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 2,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "ThinkingTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "matchMessageAndStatusCode400WhenMandatoryFieldsEmptyTest"
+  }, {
+    "name" : "suite",
+    "value" : "ThinkingTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-756TKQ1"
+  }, {
+    "name" : "thread",
+    "value" : "3480@DESKTOP-756TKQ1.Test worker(13)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Add User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b202d487e63cad3e.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,15 @@
+{
+  "total" : 1,
+  "items" : [ {
+    "uid" : "c4e7bb1d58d6dbd0b629da16c83f2d87",
+    "name" : "ThinkingTest",
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 33,
+      "unknown" : 0,
+      "total" : 35
+    }
+  } ]
+}

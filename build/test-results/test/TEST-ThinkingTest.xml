@@ -1,0 +1,3557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ThinkingTest" tests="35" skipped="0" failures="2" errors="0" timestamp="2021-09-23T15:38:32" hostname="DESKTOP-756TKQ1" time="95.401">
+  <properties/>
+  <testcase name="verifyResponseStatus200WhenUpdateContactTest" classname="ThinkingTest" time="13.781"/>
+  <testcase name="verifyThatSessionNumberInContactIsIntegerTest" classname="ThinkingTest" time="1.655"/>
+  <testcase name="verifyStatusCode401WithInvalidCredentialsTest" classname="ThinkingTest" time="1.463"/>
+  <testcase name="matchFirsNameWhenAddUserSuccessfullyTest" classname="ThinkingTest" time="0.914">
+    <failure message="java.lang.AssertionError: &#10;Expected: &lt;201&gt;&#10;     but: was &lt;400&gt;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: &lt;201&gt;
+     but: was &lt;400&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at ThinkingTest.matchFirsNameWhenAddUserSuccessfullyTest(ThinkingTest.java:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:119)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</failure>
+  </testcase>
+  <testcase name="verifyStatusCode200WhenUseValidTokenTest" classname="ThinkingTest" time="1.48"/>
+  <testcase name="getAllContactListTest3" classname="ThinkingTest" time="1.669"/>
+  <testcase name="UpdateUserFirstName" classname="ThinkingTest" time="1.604"/>
+  <testcase name="verifyErrorMessageWhenInvalidTokenTest" classname="ThinkingTest" time="2.235"/>
+  <testcase name="verifyResponseStatus400WhenInvalidIdTest" classname="ThinkingTest" time="2.41"/>
+  <testcase name="errorMessageWhenSendWithoutTokenTest" classname="ThinkingTest" time="0.646"/>
+  <testcase name="verifyResponseJsonIsNotNullTest" classname="ThinkingTest" time="1.507"/>
+  <testcase name="verifyResponseInAddContactWhenUseInvalidTokenTest" classname="ThinkingTest" time="1.89"/>
+  <testcase name="deleteContactWithoutIdTest" classname="ThinkingTest" time="32.603"/>
+  <testcase name="verifyStatusIs401WhenInvalidTokenTest" classname="ThinkingTest" time="1.628"/>
+  <testcase name="loginUserWithInvalidCredentialsTest" classname="ThinkingTest" time="0.675"/>
+  <testcase name="deleteUserWithInvalidTokenTest" classname="ThinkingTest" time="1.812"/>
+  <testcase name="errorMessageWhenSendMandatoryFieldsEmptyTest" classname="ThinkingTest" time="1.618"/>
+  <testcase name="getResponseWhenAddContactSuccessfullyTest" classname="ThinkingTest" time="1.516"/>
+  <testcase name="getContactListUserWithValidTokenTest" classname="ThinkingTest" time="1.368"/>
+  <testcase name="verifyResponseStatus200WhenUpdateUserTest" classname="ThinkingTest" time="1.467"/>
+  <testcase name="deleteContactWithIdTest" classname="ThinkingTest" time="2.208"/>
+  <testcase name="deleteContactWhitInvalidTokenUserTest" classname="ThinkingTest" time="2.978"/>
+  <testcase name="verifyStatusCode200WithValidCredentialsTest" classname="ThinkingTest" time="1.357"/>
+  <testcase name="matchMessageAndStatusCode400WhenMandatoryFieldsEmptyTest" classname="ThinkingTest" time="0.649"/>
+  <testcase name="getInvalidStatusCodeWithInvalidTokenTest" classname="ThinkingTest" time="1.346"/>
+  <testcase name="verifyResponseStatus401WhenEmptyTokenTest" classname="ThinkingTest" time="2.127"/>
+  <testcase name="verifyIfReceiveErrorMessageWhenUseTokenEmptyTest" classname="ThinkingTest" time="0.698"/>
+  <testcase name="deleteContactWithoutTokenUserTest" classname="ThinkingTest" time="2.014"/>
+  <testcase name="loginUserWithValidCredentialsTest" classname="ThinkingTest" time="0.813"/>
+  <testcase name="deleteUserWhitEmptyTokenTest" classname="ThinkingTest" time="0.687"/>
+  <testcase name="addUserSuccessfullyTest" classname="ThinkingTest" time="0.721">
+    <failure message="java.lang.AssertionError: &#10;Expected: &lt;201&gt;&#10;     but: was &lt;400&gt;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: &lt;201&gt;
+     but: was &lt;400&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at ThinkingTest.addUserSuccessfullyTest(ThinkingTest.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:119)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</failure>
+  </testcase>
+  <testcase name="verifyStatusCodeWhenUseInvalidTokenTest" classname="ThinkingTest" time="1.405"/>
+  <testcase name="addContactSuccessfullyTest" classname="ThinkingTest" time="1.743"/>
+  <testcase name="deleteUserTest" classname="ThinkingTest" time="1.708"/>
+  <testcase name="verifyEmailWithValidCredentialsTest" classname="ThinkingTest" time="0.877"/>
+  <system-out><![CDATA[2021-09-23T11:38:30,717 [Test worker] INFO  (BaseApi.java:21) - Start configuration
+2021-09-23T11:38:32,787 [Test worker] INFO  (BaseApi.java:23) - Successfully configuration
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1MjN9.Ab1FMhXFcLI5ThgoGPgwgQEYU6M2oD5OMdiJiHdSabk; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:38:43 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-pXZXel5mcKbgVwFwuUkv63GV9fE"
+Date: Thu, 23 Sep 2021 15:38:43 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 169
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1MjN9.Ab1FMhXFcLI5ThgoGPgwgQEYU6M2oD5OMdiJiHdSabk"
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 1817
+Etag: W/"719-xLiU3Jj5tN/Aowff11cZm9hcIV0"
+Date: Thu, 23 Sep 2021 15:38:45 GMT
+Via: 1.1 vegur
+
+[
+    {
+        "_id": "614c936e6a390900153edba3",
+        "firstName": "Diego",
+        "lastName": "Cadima",
+        "birthdate": "1991/01/01",
+        "email": "diego@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c77c7bfb03c00154ec1d1",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7d5ebfb03c00154ec1f7",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7fa0bfb03c00154ec21a",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f146a390900153edb5c",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f806a390900153edb7f",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    }
+]
+Request method:	PUT
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts/614c936e6a390900153edba3
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Diego Update",
+    "lastName": "Vidal Update",
+    "birthdate": "1992-01-01",
+    "email": "richonUpdate@gmail.com",
+    "phone": "74896512",
+    "street1": null,
+    "street2": null,
+    "city": null,
+    "stateProvince": null,
+    "postalCode": "1524",
+    "country": null
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 305
+Etag: W/"131-48ULwyLR5zOOjuHUQ5GRQlvnITA"
+Date: Thu, 23 Sep 2021 15:38:46 GMT
+Via: 1.1 vegur
+
+{
+    "_id": "614c936e6a390900153edba3",
+    "firstName": "Diego Update",
+    "lastName": "Vidal Update",
+    "birthdate": "1992-01-01",
+    "email": "richonupdate@gmail.com",
+    "phone": "74896512",
+    "street1": null,
+    "street2": null,
+    "city": null,
+    "stateProvince": null,
+    "postalCode": "1524",
+    "country": null,
+    "owner": "6146a80509aaff0015bcea99",
+    "__v": 0
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1Mjd9.8mtmH1y4AL-H_Gq2OnRsZVqigyWrookcbDLMIj-1P54; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:38:47 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-BRqWWxcGFZDeQB7YLN4LHYu0/8A"
+Date: Thu, 23 Sep 2021 15:38:47 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 170
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1Mjd9.8mtmH1y4AL-H_Gq2OnRsZVqigyWrookcbDLMIj-1P54"
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 1837
+Etag: W/"72d-xJfGWpS1ZKAUDzgluYMNGFlA09I"
+Date: Thu, 23 Sep 2021 15:38:48 GMT
+Via: 1.1 vegur
+
+[
+    {
+        "_id": "614c77c7bfb03c00154ec1d1",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7d5ebfb03c00154ec1f7",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7fa0bfb03c00154ec21a",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f146a390900153edb5c",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f806a390900153edb7f",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c936e6a390900153edba3",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    }
+]
+logeo: 0
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1Mjl9._WwyC6hAgJ5Gpf7Zw09DlIzxlSgzQEfPXAAq57I2SDc; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:38:49 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-ILCXLALgaF5NeQxBCpNuItYXIMg"
+Date: Thu, 23 Sep 2021 15:38:49 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 171
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1Mjl9._WwyC6hAgJ5Gpf7Zw09DlIzxlSgzQEfPXAAq57I2SDc"
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 32
+Etag: W/"20-l84Ae8oPqxLFOfh6GyOldXOyOfM"
+Date: Thu, 23 Sep 2021 15:38:50 GMT
+Via: 1.1 vegur
+
+{
+    "error": "Please authenticate."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Luis35",
+    "lastName": "Villa35",
+    "email": "luis35@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 400 Bad Request
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 45
+Etag: W/"2d-UStF8qUL2UQr7lNfRS7v2APIKHk"
+Date: Thu, 23 Sep 2021 15:38:51 GMT
+Via: 1.1 vegur
+
+{
+    "message": "Email address is already in use"
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1MzF9.ME9iET8c4kYZ7MNy8n9Ykp-3uSPF83BGqMMNnGxFu8U; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:38:51 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-GvjX0cqYa2IRfX5XmgUvyI2zqYQ"
+Date: Thu, 23 Sep 2021 15:38:51 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 172
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1MzF9.ME9iET8c4kYZ7MNy8n9Ykp-3uSPF83BGqMMNnGxFu8U"
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/logout
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Date: Thu, 23 Sep 2021 15:38:52 GMT
+Content-Length: 0
+Via: 1.1 vegur
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1MzN9.G90rEjyeyrGeJjOC-8ih_e0LjRNzStTHdAToeEGgKIM; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:38:53 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-rv1eWMRuBWLUESqXY5P8eFqeOxg"
+Date: Thu, 23 Sep 2021 15:38:53 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 174
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1MzN9.G90rEjyeyrGeJjOC-8ih_e0LjRNzStTHdAToeEGgKIM"
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 1837
+Etag: W/"72d-xJfGWpS1ZKAUDzgluYMNGFlA09I"
+Date: Thu, 23 Sep 2021 15:38:54 GMT
+Via: 1.1 vegur
+
+[
+    {
+        "_id": "614c77c7bfb03c00154ec1d1",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7d5ebfb03c00154ec1f7",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7fa0bfb03c00154ec21a",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f146a390900153edb5c",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f806a390900153edb7f",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c936e6a390900153edba3",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    }
+]
+*********************
+Country :[]
+Country size :0
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1MzR9.MkKoJNOpY97EXSh_-Kmd2ER9wME2XZmNriyJrV0srus; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:38:55 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-PQo+N/l+0XAW4w60c4IHTnYClzI"
+Date: Thu, 23 Sep 2021 15:38:55 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 175
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1MzR9.MkKoJNOpY97EXSh_-Kmd2ER9wME2XZmNriyJrV0srus"
+}
+Request method:	PATCH
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Luis Alberto Update",
+    "lastName": "Villa Update",
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 131
+Etag: W/"83-sV67rAfN+O0uvORsA8/rTdTIXNA"
+Date: Thu, 23 Sep 2021 15:38:55 GMT
+Via: 1.1 vegur
+
+{
+    "_id": "6146a80509aaff0015bcea99",
+    "firstName": "Luis Alberto Update",
+    "lastName": "Villa Update",
+    "email": "luis34@gmail.com",
+    "__v": 175
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1MzZ9.sVICRVT1nlRhGRc251cGeE9Bikw5gMJJZfMVEahCxaY; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:38:56 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 300
+Etag: W/"12c-rgixC7399ii7Rh5+t31t8OogijU"
+Date: Thu, 23 Sep 2021 15:38:56 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Alberto Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 176
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1MzZ9.sVICRVT1nlRhGRc251cGeE9Bikw5gMJJZfMVEahCxaY"
+}
+Request method:	PATCH
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Update",
+    "lastName": "Update",
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 32
+Etag: W/"20-l84Ae8oPqxLFOfh6GyOldXOyOfM"
+Date: Thu, 23 Sep 2021 15:38:58 GMT
+Via: 1.1 vegur
+
+{
+    "error": "Please authenticate."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1Mzh9._0SOgJ_JUESu2oHJmESedZ8SeJE0gF45tmbVs5cJljM; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:38:58 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 300
+Etag: W/"12c-maMXGlqLyl0JilmurPhkC/vlH0I"
+Date: Thu, 23 Sep 2021 15:38:58 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Alberto Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 177
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1Mzh9._0SOgJ_JUESu2oHJmESedZ8SeJE0gF45tmbVs5cJljM"
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 1837
+Etag: W/"72d-xJfGWpS1ZKAUDzgluYMNGFlA09I"
+Date: Thu, 23 Sep 2021 15:38:59 GMT
+Via: 1.1 vegur
+
+[
+    {
+        "_id": "614c77c7bfb03c00154ec1d1",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7d5ebfb03c00154ec1f7",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7fa0bfb03c00154ec21a",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f146a390900153edb5c",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f806a390900153edb7f",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c936e6a390900153edba3",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    }
+]
+Request method:	PUT
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts/614c77c7bfb03c00154ec1d10
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Diego",
+    "lastName": "Vidal",
+    "birthdate": "1992-01-01",
+    "email": "richonUpdate@gmail.com",
+    "phone": "74896512",
+    "street1": null,
+    "street2": null,
+    "city": null,
+    "stateProvince": null,
+    "postalCode": "1524",
+    "country": null
+}
+HTTP/1.1 400 Bad Request
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 126
+Etag: W/"7e-YDuU8sP0b8iFa89w7rLhCFxC+Qs"
+Date: Thu, 23 Sep 2021 15:39:00 GMT
+Via: 1.1 vegur
+
+{
+    "stringValue": "\"614c77c7bfb03c00154ec1d10\"",
+    "kind": "ObjectId",
+    "value": "614c77c7bfb03c00154ec1d10",
+    "path": "_id",
+    "reason": {
+        
+    }
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 32
+Etag: W/"20-l84Ae8oPqxLFOfh6GyOldXOyOfM"
+Date: Thu, 23 Sep 2021 15:39:01 GMT
+Via: 1.1 vegur
+
+{
+    "error": "Please authenticate."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1NDF9.ovGPYqpRiWJCDv_n78jY7htlz27cJWmXq3R3rhiY4RA; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:01 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 300
+Etag: W/"12c-ZQ+TFFK9UEbK+MyqSYaWNaNmfcs"
+Date: Thu, 23 Sep 2021 15:39:01 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Alberto Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 178
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1NDF9.ovGPYqpRiWJCDv_n78jY7htlz27cJWmXq3R3rhiY4RA"
+}
+Request method:	PATCH
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Luis Alberto",
+    "lastName": "Villa Var Update",
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 128
+Etag: W/"80-AaiFCEdzpQ49yv0gyS3HsHnovac"
+Date: Thu, 23 Sep 2021 15:39:02 GMT
+Via: 1.1 vegur
+
+{
+    "_id": "6146a80509aaff0015bcea99",
+    "firstName": "Luis Alberto",
+    "lastName": "Villa Var Update",
+    "email": "luis34@gmail.com",
+    "__v": 178
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1NDN9.rOGmZfroU1bdaI5HXxM6q-0sWTmdzhGbf2AY-1kTloM; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:03 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 297
+Etag: W/"129-cVbU4TCC/NyjxHuVj6/ESlEbvlA"
+Date: Thu, 23 Sep 2021 15:39:03 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Alberto",
+        "lastName": "Villa Var Update",
+        "email": "luis34@gmail.com",
+        "__v": 179
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1NDN9.rOGmZfroU1bdaI5HXxM6q-0sWTmdzhGbf2AY-1kTloM"
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Diego",
+    "lastName": "Cadima",
+    "birthdate": "1991/01/01",
+    "email": "diego@gmail.com",
+    "phone": "74896512",
+    "street1": null,
+    "street2": null,
+    "city": null,
+    "stateProvince": null,
+    "postalCode": "1524",
+    "country": null
+}
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 32
+Etag: W/"20-l84Ae8oPqxLFOfh6GyOldXOyOfM"
+Date: Thu, 23 Sep 2021 15:39:04 GMT
+Via: 1.1 vegur
+
+{
+    "error": "Please authenticate."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1NDV9.PLSMuogXEEW_nStZH4KUP0deND8A335fpePUv76bKOU; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:05 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 297
+Etag: W/"129-yrmi/IsrxkTi2el7IPTrw1ROvZE"
+Date: Thu, 23 Sep 2021 15:39:05 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Alberto",
+        "lastName": "Villa Var Update",
+        "email": "luis34@gmail.com",
+        "__v": 180
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1NDV9.PLSMuogXEEW_nStZH4KUP0deND8A335fpePUv76bKOU"
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 1837
+Etag: W/"72d-xJfGWpS1ZKAUDzgluYMNGFlA09I"
+Date: Thu, 23 Sep 2021 15:39:06 GMT
+Via: 1.1 vegur
+
+[
+    {
+        "_id": "614c77c7bfb03c00154ec1d1",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7d5ebfb03c00154ec1f7",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7fa0bfb03c00154ec21a",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f146a390900153edb5c",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f806a390900153edb7f",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c936e6a390900153edba3",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    }
+]
+Request method:	DELETE
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 503 Service Unavailable
+Connection: keep-alive
+Server: Cowboy
+Date: Thu, 23 Sep 2021 15:39:36 GMT
+Content-Length: 506
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache, no-store
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <title>Application Error</title>
+    <style media="screen">
+		  html,body,iframe {
+			margin: 0;
+			padding: 0;
+		  }
+		  html,body {
+			height: 100%;
+			overflow: hidden;
+		  }
+		  iframe {
+			width: 100%;
+			height: 100%;
+			border: 0;
+		  }
+		</style>
+  </head>
+  <body>
+    <iframe frameborder="1" scrolling="auto" src="//www.herokucdn.com/error-pages/application-error.html"/>
+  </body>
+</html>
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1Nzd9.hyuEEzx6N85jMhB_TM7QhJlCbU8Xits2OzF1oHO8F50; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:38 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 297
+Etag: W/"129-7avEHIMUz/td+ipl9eJWpimxmVI"
+Date: Thu, 23 Sep 2021 15:39:38 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Alberto",
+        "lastName": "Villa Var Update",
+        "email": "luis34@gmail.com",
+        "__v": 181
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1Nzd9.hyuEEzx6N85jMhB_TM7QhJlCbU8Xits2OzF1oHO8F50"
+}
+Request method:	PATCH
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Update",
+    "lastName": "Update",
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 32
+Etag: W/"20-l84Ae8oPqxLFOfh6GyOldXOyOfM"
+Date: Thu, 23 Sep 2021 15:39:38 GMT
+Via: 1.1 vegur
+
+{
+    "error": "Please authenticate."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis351@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Date: Thu, 23 Sep 2021 15:39:39 GMT
+Content-Length: 0
+Via: 1.1 vegur
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1ODB9.LRAycyFu15bpdrf3GnvNd_DlK3rG7XxmxxBSl7W35Ng; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:40 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 297
+Etag: W/"129-JUcl6JHTk+yu5DCvPv9CCxdQgXY"
+Date: Thu, 23 Sep 2021 15:39:40 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Alberto",
+        "lastName": "Villa Var Update",
+        "email": "luis34@gmail.com",
+        "__v": 182
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1ODB9.LRAycyFu15bpdrf3GnvNd_DlK3rG7XxmxxBSl7W35Ng"
+}
+Request method:	DELETE
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 32
+Etag: W/"20-l84Ae8oPqxLFOfh6GyOldXOyOfM"
+Date: Thu, 23 Sep 2021 15:39:41 GMT
+Via: 1.1 vegur
+
+{
+    "error": "Please authenticate."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1ODJ9.Gp127XEt063ppuyaaTOQnkrShxImPQrdALho09IS5Rc; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:42 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 297
+Etag: W/"129-LjCy2gPyHHpk0bHajeFiHjoP8vc"
+Date: Thu, 23 Sep 2021 15:39:42 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Alberto",
+        "lastName": "Villa Var Update",
+        "email": "luis34@gmail.com",
+        "__v": 183
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1ODJ9.Gp127XEt063ppuyaaTOQnkrShxImPQrdALho09IS5Rc"
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": null,
+    "lastName": null,
+    "birthdate": null,
+    "email": null,
+    "phone": null,
+    "street1": null,
+    "street2": null,
+    "city": null,
+    "stateProvince": null,
+    "postalCode": null,
+    "country": null
+}
+HTTP/1.1 400 Bad Request
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 1901
+Etag: W/"76d-gznVfr/IyHMnOG1iq5nVxBG3quc"
+Date: Thu, 23 Sep 2021 15:39:42 GMT
+Via: 1.1 vegur
+
+{
+    "errors": {
+        "firstName": {
+            "name": "ValidatorError",
+            "message": "Path `firstName` is required.",
+            "properties": {
+                "message": "Path `firstName` is required.",
+                "type": "required",
+                "path": "firstName",
+                "value": null
+            },
+            "kind": "required",
+            "path": "firstName",
+            "value": null
+        },
+        "lastName": {
+            "name": "ValidatorError",
+            "message": "Path `lastName` is required.",
+            "properties": {
+                "message": "Path `lastName` is required.",
+                "type": "required",
+                "path": "lastName",
+                "value": null
+            },
+            "kind": "required",
+            "path": "lastName",
+            "value": null
+        },
+        "birthdate": {
+            "name": "ValidatorError",
+            "message": "Birthdate is invalid",
+            "properties": {
+                "message": "Birthdate is invalid",
+                "type": "user defined",
+                "path": "birthdate",
+                "value": null,
+                "reason": {
+                    
+                }
+            },
+            "kind": "user defined",
+            "path": "birthdate",
+            "value": null,
+            "reason": {
+                
+            }
+        },
+        "email": {
+            "name": "ValidatorError",
+            "message": "Expected a string but received a null",
+            "properties": {
+                "message": "Expected a string but received a null",
+                "type": "user defined",
+                "path": "email",
+                "value": null,
+                "reason": {
+                    
+                }
+            },
+            "kind": "user defined",
+            "path": "email",
+            "value": null,
+            "reason": {
+                
+            }
+        },
+        "phone": {
+            "name": "ValidatorError",
+            "message": "Expected a string but received a null",
+            "properties": {
+                "message": "Expected a string but received a null",
+                "type": "user defined",
+                "path": "phone",
+                "value": null,
+                "reason": {
+                    
+                }
+            },
+            "kind": "user defined",
+            "path": "phone",
+            "value": null,
+            "reason": {
+                
+            }
+        },
+        "postalCode": {
+            "name": "ValidatorError",
+            "message": "Expected a string but received a null",
+            "properties": {
+                "message": "Expected a string but received a null",
+                "type": "user defined",
+                "path": "postalCode",
+                "value": null,
+                "reason": {
+                    
+                }
+            },
+            "kind": "user defined",
+            "path": "postalCode",
+            "value": null,
+            "reason": {
+                
+            }
+        }
+    },
+    "_message": "Contact validation failed",
+    "message": "Contact validation failed: firstName: Path `firstName` is required., lastName: Path `lastName` is required., birthdate: Birthdate is invalid, email: Expected a string but received a null, phone: Expected a string but received a null, postalCode: Expected a string but received a null"
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1ODN9.mWNlb7FhXhvhDJH79Pv--tXXEEELlC52us0SlRSdhKQ; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:43 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 297
+Etag: W/"129-UQBvuQ2ZV4zVz7jnBlKOXGT2A/8"
+Date: Thu, 23 Sep 2021 15:39:43 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Alberto",
+        "lastName": "Villa Var Update",
+        "email": "luis34@gmail.com",
+        "__v": 184
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1ODN9.mWNlb7FhXhvhDJH79Pv--tXXEEELlC52us0SlRSdhKQ"
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Richon",
+    "lastName": "Vidal",
+    "birthdate": "1992-01-01",
+    "email": "richon@gmail.com",
+    "phone": "74896512",
+    "street1": null,
+    "street2": null,
+    "city": null,
+    "stateProvince": null,
+    "postalCode": "1524",
+    "country": null
+}
+HTTP/1.1 201 Created
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 286
+Etag: W/"11e-EGJoCkeTKj+FdYxiDf+AqzdV33U"
+Date: Thu, 23 Sep 2021 15:39:44 GMT
+Via: 1.1 vegur
+
+{
+    "_id": "614c9fc049c355001562e539",
+    "firstName": "Richon",
+    "lastName": "Vidal",
+    "birthdate": "1992-01-01",
+    "email": "richon@gmail.com",
+    "phone": "74896512",
+    "street1": null,
+    "street2": null,
+    "city": null,
+    "stateProvince": null,
+    "postalCode": "1524",
+    "country": null,
+    "owner": "6146a80509aaff0015bcea99",
+    "__v": 0
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1ODV9.hPMHg4fg3KyWlJTkPsxWUYL_9paZmkgsVuLFTG09kKc; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:45 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 297
+Etag: W/"129-IQ0AbdkaZ0TOp6tJajiUlW16Dh0"
+Date: Thu, 23 Sep 2021 15:39:45 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Alberto",
+        "lastName": "Villa Var Update",
+        "email": "luis34@gmail.com",
+        "__v": 185
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1ODV9.hPMHg4fg3KyWlJTkPsxWUYL_9paZmkgsVuLFTG09kKc"
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 2124
+Etag: W/"84c-kvsfYhV+alzqGkrY1Kbmc0U3IEQ"
+Date: Thu, 23 Sep 2021 15:39:45 GMT
+Via: 1.1 vegur
+
+[
+    {
+        "_id": "614c9fc049c355001562e539",
+        "firstName": "Richon",
+        "lastName": "Vidal",
+        "birthdate": "1992-01-01",
+        "email": "richon@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c77c7bfb03c00154ec1d1",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7d5ebfb03c00154ec1f7",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7fa0bfb03c00154ec21a",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f146a390900153edb5c",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f806a390900153edb7f",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c936e6a390900153edba3",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    }
+]
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1ODZ9.UKO3RzY3Pk1BMUlw19Yfw7bXt_c-bcGdMTnZkSk27tU; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:46 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 297
+Etag: W/"129-6BIO6uuLMQFJe8QfY8dMoL4zWhc"
+Date: Thu, 23 Sep 2021 15:39:46 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Alberto",
+        "lastName": "Villa Var Update",
+        "email": "luis34@gmail.com",
+        "__v": 186
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1ODZ9.UKO3RzY3Pk1BMUlw19Yfw7bXt_c-bcGdMTnZkSk27tU"
+}
+Request method:	PATCH
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Luis Update",
+    "lastName": "Villa Update",
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 123
+Etag: W/"7b-Qf9f6vvCFtNp0v+LcEoC/VcrTmQ"
+Date: Thu, 23 Sep 2021 15:39:47 GMT
+Via: 1.1 vegur
+
+{
+    "_id": "6146a80509aaff0015bcea99",
+    "firstName": "Luis Update",
+    "lastName": "Villa Update",
+    "email": "luis34@gmail.com",
+    "__v": 186
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1ODh9.3-FjKE64Qf-QeuKmaEtMb-AXphWUN3v6wAVYXQjIA28; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:48 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-BZ2Q3pSqnw8E91S3ovfzVOgnpoo"
+Date: Thu, 23 Sep 2021 15:39:48 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 187
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1ODh9.3-FjKE64Qf-QeuKmaEtMb-AXphWUN3v6wAVYXQjIA28"
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 2124
+Etag: W/"84c-kvsfYhV+alzqGkrY1Kbmc0U3IEQ"
+Date: Thu, 23 Sep 2021 15:39:48 GMT
+Via: 1.1 vegur
+
+[
+    {
+        "_id": "614c9fc049c355001562e539",
+        "firstName": "Richon",
+        "lastName": "Vidal",
+        "birthdate": "1992-01-01",
+        "email": "richon@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c77c7bfb03c00154ec1d1",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7d5ebfb03c00154ec1f7",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7fa0bfb03c00154ec21a",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f146a390900153edb5c",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f806a390900153edb7f",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c936e6a390900153edba3",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    }
+]
+Request method:	DELETE
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts/614c9fc049c355001562e539
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 15
+Etag: W/"f-smqnjm2ArsFbkvZ+qy6N7Dow4bQ"
+Date: Thu, 23 Sep 2021 15:39:49 GMT
+Via: 1.1 vegur
+
+<html>
+  <body>Contact deleted</body>
+</html>
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1OTB9.dvocq_2GJRC21Lv-EorBnpAEKa3jcsGKCqmmtncqkx0; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:50 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-ET9fdLl4SUwiey28HBg+cJ+e5l4"
+Date: Thu, 23 Sep 2021 15:39:50 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 188
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1OTB9.dvocq_2GJRC21Lv-EorBnpAEKa3jcsGKCqmmtncqkx0"
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 1837
+Etag: W/"72d-xJfGWpS1ZKAUDzgluYMNGFlA09I"
+Date: Thu, 23 Sep 2021 15:39:51 GMT
+Via: 1.1 vegur
+
+[
+    {
+        "_id": "614c77c7bfb03c00154ec1d1",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7d5ebfb03c00154ec1f7",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7fa0bfb03c00154ec21a",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f146a390900153edb5c",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f806a390900153edb7f",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c936e6a390900153edba3",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    }
+]
+Request method:	DELETE
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts/614c77c7bfb03c00154ec1d1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 32
+Etag: W/"20-l84Ae8oPqxLFOfh6GyOldXOyOfM"
+Date: Thu, 23 Sep 2021 15:39:52 GMT
+Via: 1.1 vegur
+
+{
+    "error": "Please authenticate."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1OTN9.-W3368QuO2DGN--JKzPUvgcDx_D3lBs1AaS0NvV-h-4; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:53 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-XspHOHnWlAjmfXFBDR1Gc8r0CCY"
+Date: Thu, 23 Sep 2021 15:39:53 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 189
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1OTN9.-W3368QuO2DGN--JKzPUvgcDx_D3lBs1AaS0NvV-h-4"
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 123
+Etag: W/"7b-9MRyRw3jB0EPO0fQEbmd3DY6FFI"
+Date: Thu, 23 Sep 2021 15:39:53 GMT
+Via: 1.1 vegur
+
+{
+    "_id": "6146a80509aaff0015bcea99",
+    "firstName": "Luis Update",
+    "lastName": "Villa Update",
+    "email": "luis34@gmail.com",
+    "__v": 189
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": null,
+    "lastName": null,
+    "email": null,
+    "password": null
+}
+HTTP/1.1 400 Bad Request
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 1225
+Etag: W/"4c9-ZNmM9eJvq2iSV7HqvW4HPGOfCzo"
+Date: Thu, 23 Sep 2021 15:39:54 GMT
+Via: 1.1 vegur
+
+{
+    "errors": {
+        "firstName": {
+            "name": "ValidatorError",
+            "message": "Path `firstName` is required.",
+            "properties": {
+                "message": "Path `firstName` is required.",
+                "type": "required",
+                "path": "firstName",
+                "value": null
+            },
+            "kind": "required",
+            "path": "firstName",
+            "value": null
+        },
+        "lastName": {
+            "name": "ValidatorError",
+            "message": "Path `lastName` is required.",
+            "properties": {
+                "message": "Path `lastName` is required.",
+                "type": "required",
+                "path": "lastName",
+                "value": null
+            },
+            "kind": "required",
+            "path": "lastName",
+            "value": null
+        },
+        "email": {
+            "name": "ValidatorError",
+            "message": "Expected a string but received a null",
+            "properties": {
+                "message": "Expected a string but received a null",
+                "type": "user defined",
+                "path": "email",
+                "value": null,
+                "reason": {
+                    
+                }
+            },
+            "kind": "user defined",
+            "path": "email",
+            "value": null,
+            "reason": {
+                
+            }
+        },
+        "password": {
+            "name": "ValidatorError",
+            "message": "Path `password` is required.",
+            "properties": {
+                "message": "Path `password` is required.",
+                "type": "required",
+                "path": "password",
+                "value": null
+            },
+            "kind": "required",
+            "path": "password",
+            "value": null
+        }
+    },
+    "_message": "User validation failed",
+    "message": "User validation failed: firstName: Path `firstName` is required., lastName: Path `lastName` is required., email: Expected a string but received a null, password: Path `password` is required."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1OTV9.lt8s6QvtmvCWKqA8M1AiwqDxng7tQWPSYSPyBy3jVuI; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:55 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-al4g+n+GKKdKQ+YFMTgzJmV0LkU"
+Date: Thu, 23 Sep 2021 15:39:55 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 190
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1OTV9.lt8s6QvtmvCWKqA8M1AiwqDxng7tQWPSYSPyBy3jVuI"
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 32
+Etag: W/"20-l84Ae8oPqxLFOfh6GyOldXOyOfM"
+Date: Thu, 23 Sep 2021 15:39:55 GMT
+Via: 1.1 vegur
+
+{
+    "error": "Please authenticate."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1OTZ9.fAFQgncfO8s-xHqxBFAQtJX6qQ8cXyJaWhuE6zlzlKk; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:56 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-cknxZWkmH6t3vZ54SKHNRFTPMlw"
+Date: Thu, 23 Sep 2021 15:39:56 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 191
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1OTZ9.fAFQgncfO8s-xHqxBFAQtJX6qQ8cXyJaWhuE6zlzlKk"
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 1837
+Etag: W/"72d-xJfGWpS1ZKAUDzgluYMNGFlA09I"
+Date: Thu, 23 Sep 2021 15:39:57 GMT
+Via: 1.1 vegur
+
+[
+    {
+        "_id": "614c77c7bfb03c00154ec1d1",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7d5ebfb03c00154ec1f7",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7fa0bfb03c00154ec21a",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f146a390900153edb5c",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f806a390900153edb7f",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c936e6a390900153edba3",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    }
+]
+Request method:	PUT
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts/614c77c7bfb03c00154ec1d1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Diego",
+    "lastName": "Vidal",
+    "birthdate": "1992-01-01",
+    "email": "richonUpdate@gmail.com",
+    "phone": "74896512",
+    "street1": null,
+    "street2": null,
+    "city": null,
+    "stateProvince": null,
+    "postalCode": "1524",
+    "country": null
+}
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 32
+Etag: W/"20-l84Ae8oPqxLFOfh6GyOldXOyOfM"
+Date: Thu, 23 Sep 2021 15:39:58 GMT
+Via: 1.1 vegur
+
+{
+    "error": "Please authenticate."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/logout
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 32
+Etag: W/"20-l84Ae8oPqxLFOfh6GyOldXOyOfM"
+Date: Thu, 23 Sep 2021 15:39:58 GMT
+Via: 1.1 vegur
+
+{
+    "error": "Please authenticate."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1OTl9.GmfydajdgLloqtBYznkxKEika-Chh6X-C0LYy6KoE9k; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:39:59 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-cKA1j6/X4pKLnA7CL4ueMyLAzGc"
+Date: Thu, 23 Sep 2021 15:39:59 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 192
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE1OTl9.GmfydajdgLloqtBYznkxKEika-Chh6X-C0LYy6KoE9k"
+}
+Request method:	GET
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 1837
+Etag: W/"72d-xJfGWpS1ZKAUDzgluYMNGFlA09I"
+Date: Thu, 23 Sep 2021 15:40:00 GMT
+Via: 1.1 vegur
+
+[
+    {
+        "_id": "614c77c7bfb03c00154ec1d1",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7d5ebfb03c00154ec1f7",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c7fa0bfb03c00154ec21a",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f146a390900153edb5c",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c8f806a390900153edb7f",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    },
+    {
+        "_id": "614c936e6a390900153edba3",
+        "firstName": "Diego Update",
+        "lastName": "Vidal Update",
+        "birthdate": "1992-01-01",
+        "email": "richonupdate@gmail.com",
+        "phone": "74896512",
+        "street1": null,
+        "street2": null,
+        "city": null,
+        "stateProvince": null,
+        "postalCode": "1524",
+        "country": null,
+        "owner": "6146a80509aaff0015bcea99",
+        "__v": 0
+    }
+]
+Request method:	DELETE
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts/614c77c7bfb03c00154ec1d1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 32
+Etag: W/"20-l84Ae8oPqxLFOfh6GyOldXOyOfM"
+Date: Thu, 23 Sep 2021 15:40:00 GMT
+Via: 1.1 vegur
+
+{
+    "error": "Please authenticate."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis35@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRjNzc4MWJmYjAzYzAwMTU0ZWMxYjQiLCJpYXQiOjE2MzI0MTE2MDF9.Qaf-kyYW6ewEwG4xuRrhBSotOj_3GN6wt-3OvqmczH0; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:40:01 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 281
+Etag: W/"119-b3l9ydgMdYD1UVN1F0mxMlD0lkI"
+Date: Thu, 23 Sep 2021 15:40:01 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "614c7781bfb03c00154ec1b4",
+        "firstName": "Luis35",
+        "lastName": "Villa35",
+        "email": "luis35@gmail.com",
+        "__v": 14
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRjNzc4MWJmYjAzYzAwMTU0ZWMxYjQiLCJpYXQiOjE2MzI0MTE2MDF9.Qaf-kyYW6ewEwG4xuRrhBSotOj_3GN6wt-3OvqmczH0"
+}
+Request method:	DELETE
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 32
+Etag: W/"20-l84Ae8oPqxLFOfh6GyOldXOyOfM"
+Date: Thu, 23 Sep 2021 15:40:02 GMT
+Via: 1.1 vegur
+
+{
+    "error": "Please authenticate."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Luis35",
+    "lastName": "Villa35",
+    "email": "luis35@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 400 Bad Request
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 45
+Etag: W/"2d-UStF8qUL2UQr7lNfRS7v2APIKHk"
+Date: Thu, 23 Sep 2021 15:40:02 GMT
+Via: 1.1 vegur
+
+{
+    "message": "Email address is already in use"
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE2MDN9.KvzVxgZS9V-uCkWwRs-EmxTWaZpzubq24i7wEzVv5sg; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:40:03 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-NJp5VCz5RiVLs/4VkMsE2xpGpR4"
+Date: Thu, 23 Sep 2021 15:40:03 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 193
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE2MDN9.KvzVxgZS9V-uCkWwRs-EmxTWaZpzubq24i7wEzVv5sg"
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/logout
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 32
+Etag: W/"20-l84Ae8oPqxLFOfh6GyOldXOyOfM"
+Date: Thu, 23 Sep 2021 15:40:04 GMT
+Via: 1.1 vegur
+
+{
+    "error": "Please authenticate."
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis34@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE2MDV9.U6k8ucatC7QA3GzRq17kQ4kMXn9DT1-1TSRkbjIeQr0; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:40:05 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Etag: W/"124-vbPVl3el+/aH2+c10z/NjMd02qk"
+Date: Thu, 23 Sep 2021 15:40:05 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "6146a80509aaff0015bcea99",
+        "firstName": "Luis Update",
+        "lastName": "Villa Update",
+        "email": "luis34@gmail.com",
+        "__v": 194
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ2YTgwNTA5YWFmZjAwMTViY2VhOTkiLCJpYXQiOjE2MzI0MTE2MDV9.U6k8ucatC7QA3GzRq17kQ4kMXn9DT1-1TSRkbjIeQr0"
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Diego",
+    "lastName": "Cadima",
+    "birthdate": "1991/01/01",
+    "email": "diego@gmail.com",
+    "phone": "74896512",
+    "street1": null,
+    "street2": null,
+    "city": null,
+    "stateProvince": null,
+    "postalCode": "1524",
+    "country": null
+}
+HTTP/1.1 201 Created
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 285
+Etag: W/"11d-lpmpqkCtQYpmuY9dG6ZENDIrODc"
+Date: Thu, 23 Sep 2021 15:40:06 GMT
+Via: 1.1 vegur
+
+{
+    "_id": "614c9fd649c355001562e547",
+    "firstName": "Diego",
+    "lastName": "Cadima",
+    "birthdate": "1991/01/01",
+    "email": "diego@gmail.com",
+    "phone": "74896512",
+    "street1": null,
+    "street2": null,
+    "city": null,
+    "stateProvince": null,
+    "postalCode": "1524",
+    "country": null,
+    "owner": "6146a80509aaff0015bcea99",
+    "__v": 0
+}
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "First Name Test",
+    "lastName": "Last Name Test",
+    "email": "testDelete@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 201 Created
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRjOWZkNjQ5YzM1NTAwMTU2MmU1NDgiLCJpYXQiOjE2MzI0MTE2MDZ9.6jjFAAnyB-6nlsltdj9yjDDA0mE1Zo09PyM4zyp46C0; Max-Age=684; Path=/; Expires=Thu, 23 Sep 2021 15:51:30 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 300
+Etag: W/"12c-mjNkn8uF9PMqUbIBD7woep4r9F4"
+Date: Thu, 23 Sep 2021 15:40:06 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "614c9fd649c355001562e548",
+        "firstName": "First Name Test",
+        "lastName": "Last Name Test",
+        "email": "testdelete@gmail.com",
+        "__v": 1
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRjOWZkNjQ5YzM1NTAwMTU2MmU1NDgiLCJpYXQiOjE2MzI0MTE2MDZ9.6jjFAAnyB-6nlsltdj9yjDDA0mE1Zo09PyM4zyp46C0"
+}
+Request method:	DELETE
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Date: Thu, 23 Sep 2021 15:40:07 GMT
+Content-Length: 0
+Via: 1.1 vegur
+Request method:	POST
+Request URI:	https://thinking-tester-contact-list.herokuapp.com/users/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "luis35@gmail.com",
+    "password": "myPassword"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRjNzc4MWJmYjAzYzAwMTU0ZWMxYjQiLCJpYXQiOjE2MzI0MTE2MDh9.yvRcLQ7s8Ve3ofuWT8a3JowGs7sL-w0ZFM9A6IHIWn8; Max-Age=36000; Path=/; Expires=Fri, 24 Sep 2021 01:40:08 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 281
+Etag: W/"119-SsZzkEkwWsBS+1FJ1Gbu1XSO3pE"
+Date: Thu, 23 Sep 2021 15:40:08 GMT
+Via: 1.1 vegur
+
+{
+    "user": {
+        "_id": "614c7781bfb03c00154ec1b4",
+        "firstName": "Luis35",
+        "lastName": "Villa35",
+        "email": "luis35@gmail.com",
+        "__v": 15
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRjNzc4MWJmYjAzYzAwMTU0ZWMxYjQiLCJpYXQiOjE2MzI0MTE2MDh9.yvRcLQ7s8Ve3ofuWT8a3JowGs7sL-w0ZFM9A6IHIWn8"
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
