@@ -24,7 +24,8 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Post add user response 201")
     @Description("Verify that the user receives status code 201 when their register is successful.")
     @Story("Add User")
-    @TmsLink("http://190.104.11.22:83/testlink/linkto.php?tprojectPrefix=TT&item=testcase&id=TT-1")
+    @TmsLink("h" +
+            "ttp://190.104.11.22:83/testlink/linkto.php?tprojectPrefix=TT&item=testcase&id=TT-1")
     @Link("http://190.104.11.22:83/testlink/linkto.php?tprojectPrefix=TT&item=testcase&id=TT-1")
 
     public void addUserSuccessfullyTest(){
