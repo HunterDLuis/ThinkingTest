@@ -51,14 +51,13 @@ test {
 }
 
 allure {
-
     version = "2.13.5"
+    reportDir = file("build\\allure-results")
+    //downloadLinkFormat = "https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/%s/allure-commandline-%<s.zip"
     downloadLinkFormat = "https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.5/allure-commandline-2.13.5.zip"
     aspectjweaver = true
     autoconfigure = true
     clean = true
-
     configuration = "testImplementation"
-
 
 }
