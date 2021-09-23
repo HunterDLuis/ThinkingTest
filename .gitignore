@@ -4,6 +4,7 @@
 .idea
 gradle
 target
+build
 gradlew
 gradlew.bat
 settings.gradle
