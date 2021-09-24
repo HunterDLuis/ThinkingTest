@@ -29,35 +29,21 @@ dependencies {
     testRuntimeOnly 'io.rest-assured:json-path:4.4.0'
     testRuntimeOnly 'io.rest-assured:xml-path:4.4.0'
     testRuntimeOnly 'io.rest-assured:json-schema-validator:4.4.0'
-<<<<<<< HEAD
-
-    //*****
-=======
     //allure
->>>>>>> 449dbc087521ae5f66360df72bfa875576209a7b
     implementation group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.13.5'
     implementation group: 'io.qameta.allure', name: 'allure-junit4', version: '2.13.5'
 
     testRuntimeOnly group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.13.5'
     testRuntimeOnly group: 'io.qameta.allure', name: 'allure-junit4', version: '2.13.5'
-<<<<<<< HEAD
-
-
-=======
     //lombok
->>>>>>> 449dbc087521ae5f66360df72bfa875576209a7b
     compileOnly 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
 
     testCompileOnly 'org.projectlombok:lombok:1.18.20'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
-<<<<<<< HEAD
-
-=======
     //Generate aleatory data
     // https://mvnrepository.com/artifact/com.github.javafaker/javafaker
     implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
->>>>>>> 449dbc087521ae5f66360df72bfa875576209a7b
 }
 
 test {
@@ -65,13 +51,11 @@ test {
 }
 
 allure {
+    configuration = "testImplementation"
     version = "2.13.5"
-    reportDir = file("build\\allure-results")
-    //downloadLinkFormat = "https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/%s/allure-commandline-%<s.zip"
+    reportDir = file("build/allure-results")
     downloadLinkFormat = "https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.5/allure-commandline-2.13.5.zip"
     aspectjweaver = true
     autoconfigure = true
     clean = true
-    configuration = "testImplementation"
-
 }

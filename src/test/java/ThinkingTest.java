@@ -27,7 +27,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Post add user response 201")
     @Description("Verify that the user receives status code 201 when their register is successful.")
     @Story("Add User")
-    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-1\n")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-1")
     public void addUserSuccessfullyTest(){
         UserRequest userRequest = UserDataFactory.validAccount();
         Response responseUser = getResponsePostAddUser(userRequest, "users");
@@ -66,7 +66,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Post add user - verify firstName")
     @Description("Verify that the json response contains the same firstName that the user registered ")
     @Story("Add User")
-    @TmsLink("")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-3")
     public void matchFirsNameWhenAddUserSuccessfullyTest(){
         UserRequest userRequest = UserDataFactory.validAccount();
 
@@ -86,7 +86,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Post login user with valid credentials")
     @Description("Verify that user receives a status code 200  when request login with valid Credentials")
     @Story("Login User")
-    @TmsLink("")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-4")
     public void loginUserWithValidCredentialsTest(){
         PostLoginUserRequest loginUserRequest = PostLoginUserFactory.defaultUser();
         Response responseLoginUser = getResponsePostLoginUserRequest(loginUserRequest, "users/login");
@@ -100,7 +100,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Post login user with invalid credentials")
     @Description("Verify that user receives a status code 401 when request login with invalid Credentials")
     @Story("Login User")
-    @TmsLink("")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-5")
     public void loginUserWithInvalidCredentialsTest(){
         PostLoginUserRequest invalidCredential = PostLoginUserFactory.invalidCredential();
         Response responseLoginUser = getResponsePostLoginUserRequest(invalidCredential, "users/login");
@@ -114,7 +114,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Post login user - Verify user email")
     @Description("Verify that Json response contains the same email  that the user entered.")
     @Story("Login User")
-    @TmsLink("")
+    @TmsLink("testlink/linkto.php?tprojectPrefix=TT&item=testcase&id=TT-6")
     public void verifyEmailWithValidCredentialsTest(){
         PostLoginUserRequest loginUserRequest = PostLoginUserFactory.defaultUser();
 
@@ -134,6 +134,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Get user with valid token")
     @Description("Verify that user receives a status code 200 when sends a request with the valid token ")
     @Story("Get User")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-7")
     public void verifyStatusCode200WithValidCredentialsTest(){
         Response response = getResponseGetRequest(getUserTokenFromLoginUser(), "users/me");
         int statusCode = response.getStatusCode();
@@ -145,6 +146,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Get user with invalid token")
     @Description("Verify that the user receives a status code 401 when  sends a request with the invalid token")
     @Story("Get User")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-8")
     public void verifyStatusCode401WithInvalidCredentialsTest(){
         Response response = getResponseGetRequest(getUserTokenFromLoginUser()+"0", "users/me");
         int statusCode = response.getStatusCode();
@@ -157,6 +159,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Receives error message when send token empty")
     @Description("Verify that the user receives a message when sends a request without the token")
     @Story("Get User")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-9")
     public void errorMessageWhenSendWithoutTokenTest(){
         Response response = getResponseGetRequest("", "users/me");
         int statusCode = response.getStatusCode();
@@ -174,6 +177,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Add contact successfully")
     @Description("Verify that the user receive valid status code 201 when register a contact successfully")
     @Story("Post contact")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-10")
     public void addContactSuccessfullyTest(){
         ContactRequest contactRequest = ContactFactory.defaultInfoAccount();
         Response validateResponse =  getResponsePostAddContact(getUserTokenFromLoginUser(), contactRequest, "contacts", HttpStatus.SC_CREATED);
@@ -187,6 +191,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Error message and status code 400 when mandatory fields empty")
     @Description("Verify that user receive invalid status code 400 when register a contact with the mandatory fields empty")
     @Story("Post contact")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-11")
     public void errorMessageWhenSendMandatoryFieldsEmptyTest(){
         ContactRequest dataMissingContact = ContactFactory.missingAllInformation();
 
@@ -205,6 +210,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Error message when send invalid token")
     @Description("Verify that user receive invalid status code 401 when use invalid token")
     @Story("Post contact")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-12")
     public void verifyResponseInAddContactWhenUseInvalidTokenTest(){
         ContactRequest contactRequest = ContactFactory.defaultInfoAccount();
 
@@ -220,6 +226,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Response json contain the same birthdate")
     @Description("Verify that the response contains the same birthdate as the contact registered")
     @Story("Post contact")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-13")
     public void getResponseWhenAddContactSuccessfullyTest(){
         ContactRequest contactRequest = ContactFactory.defaultInfoAccount();
         Response validateResponse = getResponsePostAddContact(getUserTokenFromLoginUser(), contactRequest, "contacts", HttpStatus.SC_CREATED);
@@ -237,6 +244,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Response status code 200 with valid token")
     @Description("Verify that user receives a status code 200 when sends a request  Contact list with  the valid token")
     @Story("Get contacts")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-14")
     public void getContactListUserWithValidTokenTest(){
         Response response = getResponseGetRequest(getUserTokenFromLoginUser(), "contacts");
 
@@ -249,6 +257,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Response status code 401 with invalid token")
     @Description("Verify that the user receives a status code 401 when sends a request  Contact list   invalid token.")
     @Story("Get contacts")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-15")
     public void getInvalidStatusCodeWithInvalidTokenTest(){
         Response response = getResponseGetRequest(getUserTokenFromLoginUser() + "0", "contacts");
         int statusCode = response.getStatusCode();
@@ -261,6 +270,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Session number in contact is integer")
     @Description("Verify that the session number of a new contact is integer")
     @Story("Get contacts")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-16")
     public void  verifyThatSessionNumberInContactIsIntegerTest(){
         Response response = getResponseGetRequest(getUserTokenFromLoginUser(), "contacts");
 
@@ -272,11 +282,13 @@ public class ThinkingTest extends BaseApi {
 
         System.out.println("logeo: " + v);
     }
+
     @Test
     @Severity(SeverityLevel.MINOR)
     @DisplayName("Filter contact list")
     @Description("Verify that is possible to get all contact list information of user  using page filter")
     @Story("Get contacts")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-17")
     public void  getAllContactListTest3(){
         Response response = getResponseGetRequest(getUserTokenFromLoginUser(), "contacts");
 
@@ -294,6 +306,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Status code 200 when update user first name")
     @Description("Verify that the user  receives response  status code 200 when sends a request with a valid token.")
     @Story("Path user")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-18")
     public void verifyResponseStatus200WhenUpdateUserTest(){
         UserRequest userRequest = UserDataFactory.updateFirstName();
 
@@ -308,6 +321,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Match user first name with valid token")
     @Description("Verify that the response json content the same first name that the user updated")
     @Story("Path user")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-19")
     public void UpdateUserFirstName(){
         UserRequest userRequest = UserDataFactory.updateFirstName();
         Response response = getResponsePathUserRequest(getUserTokenFromLoginUser(), userRequest, "/users/me");
@@ -323,6 +337,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Response json is not null")
     @Description("Verify that the user receives json when sends a update with a valid token.")
     @Story("Path user")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-20")
     public void verifyResponseJsonIsNotNullTest(){
         UserRequest userRequest = UserDataFactory.updateLastName();
         Response response = getResponsePathUserRequest(getUserTokenFromLoginUser(), userRequest, "/users/me");
@@ -337,6 +352,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Status code 401 when send invalid token")
     @Description("Verify that the user receives response status code 401 when sends a request with a invalid token.")
     @Story("Path user")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-21")
     public void verifyStatusIs401WhenInvalidTokenTest(){
         UserRequest userRequest = UserDataFactory.defaultAccount();
         Response response = getResponsePathUserRequest(getUserTokenFromLoginUser()+"0", userRequest, "/users/me");
@@ -350,6 +366,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Error message when send invalid token")
     @Description("Verify that the user receives a message when sends a request with an invalid  token.")
     @Story("Path user")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-22")
     public void verifyErrorMessageWhenInvalidTokenTest(){
         UserRequest userRequest =  UserDataFactory.defaultAccount();
         Response response = getResponsePathUserRequest(getUserTokenFromLoginUser()+"0", userRequest, "/users/me");
@@ -366,6 +383,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Status code 200 when use valid token")
     @Description("Verify that user authenticated receive response with status code 200 when logout with valid token")
     @Story("Post log out user")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-23")
     public void verifyStatusCode200WhenUseValidTokenTest(){
         Response responseUser = getResponsePostLogOutUser(getUserTokenFromLoginUser(), "users/logout");
         @NonNull
@@ -378,6 +396,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Status code 401 when use invalid token")
     @Description("Verify that user receives a status code 401 when request logout with invalid token")
     @Story("Post log out user")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-24")
     public void verifyStatusCodeWhenUseInvalidTokenTest(){
 
         Response responseUser = getResponsePostLogOutUser(getUserTokenFromLoginUser()+"a", "users/logout");
@@ -391,6 +410,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Error message when use token empty")
     @Description("Verify that the user receive a message when use an token empty for request logout")
     @Story("Post log out user")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-25")
     public void verifyIfReceiveErrorMessageWhenUseTokenEmptyTest(){
         Response responseUser = getResponsePostLogOutUser("", "users/logout");
         @NonNull
@@ -409,6 +429,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Statud code 200 when updated a contact")
     @Description("Verify that the user receives status code 200 when the request update is successful.")
     @Story("Put contact")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-26")
     public void verifyResponseStatus200WhenUpdateContactTest(){
         String token = getUserTokenFromLoginUser();
         Response response = getResponseGetRequest(token, "contacts");
@@ -428,6 +449,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Status code 401 when token is empty")
     @Description("Verify that the user receives status code 401 when the Token  is empty.")
     @Story("Put contact")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-27")
     public void verifyResponseStatus401WhenEmptyTokenTest(){
         Response response = getResponseGetRequest(getUserTokenFromLoginUser(), "contacts");
 
@@ -448,6 +470,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Status code 400 when invalid id")
     @Description("Verify that the user receives status code 400 when the Id  is invalid.")
     @Story("Put contact")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-28")
     public void verifyResponseStatus400WhenInvalidIdTest(){
         String token = getUserTokenFromLoginUser();
         Response response = getResponseGetRequest(token, "contacts");
@@ -470,6 +493,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Delete contact - Status code 200 whit valid id")
     @Description("Verify that the user receives status code 200 when sends a request delete with a valid token.")
     @Story("Delete a contact")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-32")
     public void deleteContactWithIdTest(){
         String token = getUserTokenFromLoginUser();
         Response response = getResponseGetRequest(token, "contacts");
@@ -488,6 +512,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Delete contact - Status code 401 whit valid id")
     @Description("Verify that the user receives status code 401 if request delete a contact with a empty token")
     @Story("Delete a contact")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-33")
     public void deleteContactWithoutTokenUserTest(){
         String token = getUserTokenFromLoginUser();
         Response response = getResponseGetRequest(token, "contacts");
@@ -506,6 +531,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Delete contact - Status code 401 whit invalid token")
     @Description("Verify that the user receives  status code 401 if requested to delete a contact  with invalid token.")
     @Story("Delete a contact")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-34")
     public void deleteContactWhitInvalidTokenUserTest(){
         String token = getUserTokenFromLoginUser();
         Response response = getResponseGetRequest(token, "contacts");
@@ -524,6 +550,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Delete contact- Status code 503 whit empty id")
     @Description("Verify that the user receives  status code 503 if requested to delete a contact  with empty id.")
     @Story("Delete a contact")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-35")
     public void deleteContactWithoutIdTest(){
         String token = getUserTokenFromLoginUser();
         Response responseDeleteContact = getResponseDeleteContact(token, "contacts/", "");
@@ -538,6 +565,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Delete User - Status code 200 whit a valid token")
     @Description("Verify that the user receives status code 200 when sends a DELETE user request with a valid token")
     @Story("Delete user")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-29")
     public void deleteUserTest(){
         UserRequest userRequest = UserDataFactory.validAccount();
 
@@ -560,6 +588,7 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Delete User - Status code 401 whit a invalid token")
     @Description("Verify that the user receives status code 401 when sends DELETE user request with a invalid token")
     @Story("Delete user")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-30")
     public void deleteUserWithInvalidTokenTest(){
         Response response = getResponseDeleteUser(getUserTokenFromLoginUser()+"0", "/users/me");
         int statusCode = response.getStatusCode();
@@ -571,11 +600,13 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Delete User - Status code 401 whit empty token")
     @Description("Verify that the user receives status code 401 when sends DELETE user request with empty token")
     @Story("Delete user")
+    @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-31")
     public void deleteUserWhitEmptyTokenTest(){
         Response response = getResponseDeleteUser("", "/users/me");
         int statusCode = response.getStatusCode();
         assertThat(statusCode, equalTo(HttpStatus.SC_UNAUTHORIZED));
     }
+    //*****************************************//
     /*Reuse Method*/
     //AddUser
     private Response getResponsePostAddUser(UserRequest userRequest, String path) {
