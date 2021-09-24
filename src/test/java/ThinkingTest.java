@@ -82,9 +82,9 @@ public class ThinkingTest extends BaseApi {
 
     /*Post Login User*/
     @Test
-    @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Post login user- Status code 401 when send with invalid credentials")
-    @Description("Verify that user receives a status code 401 when sends login request with invalid Credentials")
+    @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("Post login user - Status code 200 when send  with valid credentials")
+    @Description("Verify that user receives a status code 200  when sends login request with valid Credentials")
     @Story("Login User")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-4")
     public void loginUserWithValidCredentialsTest(){
@@ -97,8 +97,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Post login user with invalid credentials")
-    @Description("Verify that user receives a status code 401 when request login with invalid Credentials")
+    @DisplayName("Post login user- Status code 401 when send with invalid credentials")
+    @Description("Verify that user receives a status code 401 when sends login request with invalid Credentials")
     @Story("Login User")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-5")
     public void loginUserWithInvalidCredentialsTest(){
