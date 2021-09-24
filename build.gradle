@@ -29,18 +29,21 @@ dependencies {
     testRuntimeOnly 'io.rest-assured:json-path:4.4.0'
     testRuntimeOnly 'io.rest-assured:xml-path:4.4.0'
     testRuntimeOnly 'io.rest-assured:json-schema-validator:4.4.0'
-    //*****
+    //allure
     implementation group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.13.5'
     implementation group: 'io.qameta.allure', name: 'allure-junit4', version: '2.13.5'
 
     testRuntimeOnly group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.13.5'
     testRuntimeOnly group: 'io.qameta.allure', name: 'allure-junit4', version: '2.13.5'
-
+    //lombok
     compileOnly 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
 
     testCompileOnly 'org.projectlombok:lombok:1.18.20'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
+    //Generate aleatory data
+    // https://mvnrepository.com/artifact/com.github.javafaker/javafaker
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
 }
 
 test {
