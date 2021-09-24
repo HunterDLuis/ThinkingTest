@@ -3,9 +3,10 @@ import io.qameta.allure.junit4.*;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import lombok.NonNull;
+
 import model.contact.ContactRequest;
-import model.user.UserRequest;
 import model.user.PostLoginUserRequest;
+import model.user.UserRequest;
 import org.apache.http.HttpStatus;
 import org.junit.Test;
 
@@ -21,7 +22,7 @@ public class ThinkingTest extends BaseApi {
     /*POST Add User*/
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Post add user response 201")
+    @DisplayName("Post add user - Status code 201 when user is registered.")
     @Description("Verify that the user receives status code 201 when their register is successful.")
     @Story("Add User")
     public void addUserSuccessfullyTest(){
@@ -40,8 +41,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Post add user response 400")
-    @Description("Verify that the user receive status code 400 when user register with mandatory fields empty")
+    @DisplayName("Post add user - response status code 400 when send empty mandatory fields")
+    @Description("Verify that the user receives status code 400 when register with empty mandatory fields in add user request")
     @Story("Add User")
     public void matchMessageAndStatusCode400WhenMandatoryFieldsEmptyTest(){
         UserRequest userRequest = new UserRequest();
@@ -60,7 +61,7 @@ public class ThinkingTest extends BaseApi {
     @Test
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Post add user - verify firstName")
-    @Description("Verify that the json response contains the same firstName that the user registered ")
+    @Description("Verify that json response contains the same firstName that the user has been registered in add user request")
     @Story("Add User")
     public void matchFirsNameWhenAddUserSuccessfullyTest(){
         UserRequest userRequest = new UserRequest("Luis35", "Villa35", "luis35@gmail.com", "myPassword");
@@ -78,8 +79,8 @@ public class ThinkingTest extends BaseApi {
     /*Post Login User*/
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Post login user with valid credentials")
-    @Description("Verify that user receives a status code 200  when request login with valid Credentials")
+    @DisplayName("Post login user - Status code 200 when send  with valid credentials")
+    @Description("Verify that user receives a status code 200  when sends login request with valid Credentials")
     @Story("Login User")
     public void loginUserWithValidCredentialsTest(){
         PostLoginUserRequest loginUserRequest = new  PostLoginUserRequest("luis35@gmail.com", "myPassword");
@@ -91,8 +92,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Post login user with invalid credentials")
-    @Description("Verify that user receives a status code 401 when request login with invalid Credentials")
+    @DisplayName("Post login user- Status code 401 when send with invalid credentials")
+    @Description("Verify that user receives a status code 401 when sends login request with invalid Credentials")
     @Story("Login User")
     public void loginUserWithInvalidCredentialsTest(){
         PostLoginUserRequest loginUserRequest = new PostLoginUserRequest("luis351@gmail.com", "myPassword");
@@ -105,7 +106,7 @@ public class ThinkingTest extends BaseApi {
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Post login user - Verify user email")
-    @Description("Verify that Json response contains the same email  that the user entered.")
+    @Description("Verify that Json response contains the same email  that the user entered when sends login request.")
     @Story("Login User")
     public void verifyEmailWithValidCredentialsTest(){
         PostLoginUserRequest loginUserRequest = new PostLoginUserRequest("luis35@gmail.com", "myPassword");
@@ -123,8 +124,8 @@ public class ThinkingTest extends BaseApi {
     /*Get User*/
     @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Get user with valid token")
-    @Description("Verify that user receives a status code 200 when sends a request with the valid token ")
+    @DisplayName("Get user - Status code 200 when send with valid token")
+    @Description("Verify that user receives a status code 200 when sends get user request with the valid token ")
     @Story("Get User")
     public void verifyStatusCode200WithValidCredentialsTest(){
         Response response = genericGetRequest(getUserTokenFromLoginUser(), "users/me");
@@ -134,8 +135,8 @@ public class ThinkingTest extends BaseApi {
     }
     @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Get user with invalid token")
-    @Description("Verify that the user receives a status code 401 when  sends a request with the invalid token")
+    @DisplayName("Get user - Status code 401 when send with invalid token")
+    @Description("Verify that the user receives a status code 401 when  sends get user request with the invalid token")
     @Story("Get User")
     public void verifyStatusCode401WithInvalidCredentialsTest(){
         Response response = genericGetRequest(getUserTokenFromLoginUser()+"0", "users/me");
@@ -146,7 +147,7 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Receives error message when send token empty")
+    @DisplayName("Get user - Receives error message when send token empty")
     @Description("Verify that the user receives a message when sends a request without the token")
     @Story("Get User")
     public void errorMessageWhenSendWithoutTokenTest(){
@@ -163,8 +164,8 @@ public class ThinkingTest extends BaseApi {
     /*POST Add Contact*/
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Add contact successfully")
-    @Description("Verify that the user receive valid status code 201 when register a contact successfully")
+    @DisplayName("Post contact - Status code 201 when add contact successfully")
+    @Description("Verify that the user receives  status code 201 when a contact is registered  successfully")
     @Story("Post contact")
     public void addContactSuccessfullyTest(){
         ContactRequest contactRequest = new ContactRequest("Diego", "Cadima", "1991/01/01", "diego@gmail.com", "74896512", "1524");
@@ -176,8 +177,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Error message and status code 400 when mandatory fields empty")
-    @Description("Verify that user receive invalid status code 400 when register a contact with the mandatory fields empty")
+    @DisplayName("Post contact - Error message and status code 400 when mandatory fields empty")
+    @Description("Verify that user receives status code 400 when the mandatory fields of register contact are empty")
     @Story("Post contact")
     public void errorMessageWhenSendMandatoryFieldsEmptyTest(){
         ContactRequest contactRequest = new ContactRequest();
@@ -194,8 +195,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Error message when send invalid token")
-    @Description("Verify that user receive invalid status code 401 when use invalid token")
+    @DisplayName("Post contact - Error message when send invalid token")
+    @Description("Verify that user receives  status code 401 when sends contact request with invalid token")
     @Story("Post contact")
     public void verifyResponseInAddContactWhenUseInvalidTokenTest(){
         ContactRequest contactRequest = new ContactRequest("Diego", "Cadima", "1991/01/01", "diego@gmail.com", "74896512", "1524");
@@ -209,8 +210,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.MINOR)
-    @DisplayName("Response json contain the same birthdate")
-    @Description("Verify that the response contains the same birthdate as the contact registered")
+    @DisplayName("Post Contact - Response json contain the same birthdate")
+    @Description("Verify that the response contains the same birthdate as the contact has been registered in add contact request")
     @Story("Post contact")
     public void getResponseWhenAddContactSuccessfullyTest(){
         ContactRequest contactRequest = new ContactRequest("Richon", "Vidal", "1992-01-01", "richon@gmail.com", "74896512", "1524");
@@ -226,8 +227,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Response status code 200 with valid token")
-    @Description("Verify that user receives a status code 200 when sends a request  Contact list with  the valid token")
+    @DisplayName("Get contact - status code 200 with valid token")
+    @Description("Verify that user receives a status code 200 when sends get contact list request with  the valid token")
     @Story("Get contacts")
     public void getContactListUserWithValidTokenTest() {
         Response response = genericGetRequest(getUserTokenFromLoginUser(), "contacts");
@@ -238,8 +239,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Response status code 401 with invalid token")
-    @Description("Verify that the user receives a status code 401 when sends a request  Contact list   invalid token.")
+    @DisplayName("Get contact - status code 401 with invalid token")
+    @Description("Verify that the user receives a status code 401 when sends get contact list request  with  invalid token.")
     @Story("Get contacts")
     public void getInvalidStatusCodeWithInvalidTokenTest() {
         Response response = genericGetRequest(getUserTokenFromLoginUser() + "0", "contacts");
@@ -250,8 +251,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.MINOR)
-    @DisplayName("Session number in contact is integer")
-    @Description("Verify that the session number of a new contact is integer")
+    @DisplayName("Get contact - Session number in contact is integer")
+    @Description("Verify that the session number of a new contact is integer when sends get contact request")
     @Story("Get contacts")
     public void  verifyThatSessionNumberInContactIsIntegerTest() {
         Response response = genericGetRequest(getUserTokenFromLoginUser(), "contacts");
@@ -266,8 +267,8 @@ public class ThinkingTest extends BaseApi {
     }
     @Test
     @Severity(SeverityLevel.MINOR)
-    @DisplayName("Filter contact list")
-    @Description("Verify that is possible to get all contact list information of user  using page filter")
+    @DisplayName("Get contact - Filter contact list")
+    @Description("Verify that user can filter all contacts that it has country equal USA ")
     @Story("Get contacts")
     public void  getAllContactListTest3() {
         Response response = genericGetRequest(getUserTokenFromLoginUser(), "contacts");
@@ -283,9 +284,9 @@ public class ThinkingTest extends BaseApi {
     /*PATH user*/
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Status code 200 when update user first name")
-    @Description("Verify that the user  receives response  status code 200 when sends a request with a valid token.")
-    @Story("Path user")
+    @DisplayName("Patch user - Status code 200 when update user first name")
+    @Description("Verify that the user  receives status code 200 when sends a path user request with a valid token.")
+    @Story("Patch user")
     public void verifyResponseStatus200WhenUpdateUserTest(){
         UserRequest userRequest = new UserRequest("Luis Update", "Villa Update", "luis34@gmail.com","myPassword");
 
@@ -297,9 +298,9 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Match user first name with valid token")
-    @Description("Verify that the response json content the same first name that the user updated")
-    @Story("Path user")
+    @DisplayName("Patch user - Match user first name with valid token")
+    @Description("Verify that the response json contents the same first name that the user updated when sends path user request")
+    @Story("Patch user")
     public void UpdateUserFirstName(){
         UserRequest userRequest = new UserRequest("Luis Alberto Update", "Villa Update", "luis34@gmail.com","myPassword");
         Response response = genericPathUserRequest(getUserTokenFromLoginUser(), userRequest, "/users/me");
@@ -312,9 +313,9 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Response json is not null")
-    @Description("Verify that the user receives json when sends a update with a valid token.")
-    @Story("Path user")
+    @DisplayName("Patch user - Response json is not null")
+    @Description("Verify that the user receives json when sends path user request with valid token.")
+    @Story("Patch user")
     public void verifyResponseJsonIsNotNullTest(){
         UserRequest userRequest = new UserRequest("Luis Alberto", "Villa Var Update", "luis34@gmail.com","myPassword");
         Response response = genericPathUserRequest(getUserTokenFromLoginUser(), userRequest, "/users/me");
@@ -326,9 +327,9 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Status code 401 when send invalid token")
-    @Description("Verify that the user receives response status code 401 when sends a request with a invalid token.")
-    @Story("Path user")
+    @DisplayName("Patch user-Status code 401 when send invalid token")
+    @Description("Verify that the user receives  status code 401 when sends path user request with a invalid token.")
+    @Story("Patch user")
     public void verifyStatusIs401WhenInvalidTokenTest(){
         UserRequest userRequest = new UserRequest("Update", "Update", "luis34@gmail.com","myPassword");
         Response response = genericPathUserRequest(getUserTokenFromLoginUser()+"0", userRequest, "/users/me");
@@ -339,9 +340,9 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Error message when send invalid token")
+    @DisplayName("Patch user -Error message when send invalid token")
     @Description("Verify that the user receives a message when sends a request with an invalid  token.")
-    @Story("Path user")
+    @Story("Patch user")
     public void verifyErrorMessageWhenInvalidTokenTest(){
         UserRequest userRequest =  new UserRequest("Update", "Update", "luis34@gmail.com","myPassword");
         Response response = genericPathUserRequest(getUserTokenFromLoginUser()+"0", userRequest, "/users/me");
@@ -355,8 +356,8 @@ public class ThinkingTest extends BaseApi {
     /*POST Log out User*/
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Status code 200 when use valid token")
-    @Description("Verify that user authenticated receive response with status code 200 when logout with valid token")
+    @DisplayName("Post log out user - Status code 200 when use valid token")
+    @Description("Verify that user authenticated receives status code 200 when logout with valid token")
     @Story("Post log out user")
     public void verifyStatusCode200WhenUseValidTokenTest(){
         Response responseUser = genericMethodPostLogOutUser(getUserTokenFromLoginUser(), "users/logout");
@@ -367,8 +368,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Status code 401 when use invalid token")
-    @Description("Verify that user receives a status code 401 when request logout with invalid token")
+    @DisplayName("Post log out user - Status code 401 when use invalid token")
+    @Description("Verify that user receives a status code 401 when sends log out request  with invalid token")
     @Story("Post log out user")
     public void verifyStatusCodeWhenUseInvalidTokenTest(){
 
@@ -380,8 +381,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.MINOR)
-    @DisplayName("Error message when use token empty")
-    @Description("Verify that the user receive a message when use an token empty for request logout")
+    @DisplayName("Post log out user - Error message when use empty")
+    @Description("Verify that the user receives a message when use an empty token for request logout")
     @Story("Post log out user")
     public void verifyIfReceiveErrorMessageWhenUseTokenEmptyTest(){
         Response responseUser = genericMethodPostLogOutUser("", "users/logout");
@@ -398,8 +399,8 @@ public class ThinkingTest extends BaseApi {
     /*PUT CONTACT*/
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Statud code 200 when updated a contact")
-    @Description("Verify that the user receives status code 200 when the request update is successful.")
+    @DisplayName("Put contact- Status code 200 when updated a contact")
+    @Description("Verify that the user receives status code 200 when  put contact request is successful.")
     @Story("Put contact")
     public void verifyResponseStatus200WhenUpdateContactTest(){
         String token = getUserTokenFromLoginUser();
@@ -417,8 +418,8 @@ public class ThinkingTest extends BaseApi {
     }
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Status code 401 when token is empty")
-    @Description("Verify that the user receives status code 401 when the Token  is empty.")
+    @DisplayName("Put contact - Status code 401 when token is empty")
+    @Description("Verify that the user receives status code 401 when sends put contact request with empty token.")
     @Story("Put contact")
     public void verifyResponseStatus401WhenEmptyTokenTest(){
         Response response = genericGetRequest(getUserTokenFromLoginUser(), "contacts");
@@ -437,7 +438,7 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Status code 400 when invalid id")
+    @DisplayName("Put contact-Status code 400 when invalid id")
     @Description("Verify that the user receives status code 400 when the Id  is invalid.")
     @Story("Put contact")
     public void verifyResponseStatus400WhenInvalidIdTest(){
@@ -478,7 +479,7 @@ public class ThinkingTest extends BaseApi {
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Delete contact - Status code 401 whit valid id")
-    @Description("Verify that the user receives status code 401 if request delete a contact with a empty token")
+    @Description("Verify that the user receives status code 401 when sends delete contact request with empty token")
     @Story("Delete a contact")
     public void deleteContactWithoutTokenUserTest(){
         String token = getUserTokenFromLoginUser();
@@ -495,8 +496,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Delete contact - Status code 401 whit invalid token")
-    @Description("Verify that the user receives  status code 401 if requested to delete a contact  with invalid token.")
+    @DisplayName("Delete contact - Status code 401 with invalid token")
+    @Description("Verify that the user receives  status code 401 when sends delete contact request with invalid token.")
     @Story("Delete a contact")
     public void deleteContactWhitInvalidTokenUserTest(){
         String token = getUserTokenFromLoginUser();
@@ -513,8 +514,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Delete contact- Status code 503 whit empty id")
-    @Description("Verify that the user receives  status code 503 if requested to delete a contact  with empty id.")
+    @DisplayName("Delete contact- Status code 503 with empty id")
+    @Description("Verify that the user receives  status code 503 when sends delete contact request with empty id.")
     @Story("Delete a contact")
     public void deleteContactWithoutIdTest(){
         String token = getUserTokenFromLoginUser();
@@ -529,8 +530,8 @@ public class ThinkingTest extends BaseApi {
     /*Delete User*/
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Delete User - Status code 200 whit a valid token")
-    @Description("Verify that the user receives status code 200 when sends a DELETE user request with a valid token")
+    @DisplayName("Delete User - Status code 200 with a valid token")
+    @Description("Verify that the user receives status code 200 when sends delete user request with a valid token")
     @Story("Delete user")
     public void deleteUserTest(){
         UserRequest userRequest = new UserRequest("First Name Test", "Last Name Test", "testDelete@gmail.com", "myPassword");
@@ -551,8 +552,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Delete User - Status code 401 whit a invalid token")
-    @Description("Verify that the user receives status code 401 when sends DELETE user request with a invalid token")
+    @DisplayName("Delete User - Status code 401 with a invalid token")
+    @Description("Verify that the user receives status code 401 when sends delete user request with a invalid token")
     @Story("Delete user")
     public void deleteUserWithInvalidTokenTest(){
         Response response = responseDeleteUser(getUserTokenFromLoginUser()+"0", "/users/me");
@@ -562,8 +563,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Delete User - Status code 401 whit empty token")
-    @Description("Verify that the user receives status code 401 when sends DELETE user request with empty token")
+    @DisplayName("Delete User - Status code 401 with empty token")
+    @Description("Verify that the user receives status code 401 when sends delete user request with empty token")
     @Story("Delete user")
     public void deleteUserWhitEmptyTokenTest(){
         Response response = responseDeleteUser("", "/users/me");
