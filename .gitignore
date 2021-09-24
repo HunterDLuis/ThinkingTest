@@ -1,9 +1,13 @@
+/logs
+.allure
 .gradle
 .idea
 gradle
 target
+build
 gradlew
 gradlew.bat
+
 settings.gradle
 .idea/misc.xml
 .allure
