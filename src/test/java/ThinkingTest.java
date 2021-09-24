@@ -1,3 +1,6 @@
+import data.factory.ContactFactory;
+import data.factory.PostLoginUserFactory;
+import data.factory.UserDataFactory;
 import io.qameta.allure.*;
 import io.qameta.allure.junit4.*;
 import io.restassured.http.ContentType;
@@ -26,9 +29,8 @@ public class ThinkingTest extends BaseApi {
     @Story("Add User")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-1\n")
     public void addUserSuccessfullyTest(){
-        UserRequest userRequest = new UserRequest("Luis35", "Villa35", "luis35@gmail.com", "myPassword");
-
-        Response responseUser = genericMethodPostAddUser(userRequest, "users");
+        UserRequest userRequest = UserDataFactory.validAccount();
+        Response responseUser = getResponsePostAddUser(userRequest, "users");
 
         int statusCode = responseUser.getStatusCode();
         String body = responseUser.getBody().asString();
@@ -46,9 +48,9 @@ public class ThinkingTest extends BaseApi {
     @Story("Add User")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-2")
     public void matchMessageAndStatusCode400WhenMandatoryFieldsEmptyTest(){
-        UserRequest userRequest = new UserRequest();
+        UserRequest dataMissingUser = UserDataFactory.missingAllInformation();
 
-        Response responseUser = genericMethodPostAddUser(userRequest, "users");
+        Response responseUser = getResponsePostAddUser(dataMissingUser, "users");
 
         int statusCode = responseUser.getStatusCode();
         String body = responseUser.getBody().asString();
@@ -66,16 +68,16 @@ public class ThinkingTest extends BaseApi {
     @Story("Add User")
     @TmsLink("")
     public void matchFirsNameWhenAddUserSuccessfullyTest(){
-        UserRequest userRequest = new UserRequest("Luis35", "Villa35", "luis35@gmail.com", "myPassword");
+        UserRequest userRequest = UserDataFactory.validAccount();
 
-        Response responseUser = genericMethodPostAddUser(userRequest, "users");
+        Response responseUser = getResponsePostAddUser(userRequest, "users");
 
         int statusCode = responseUser.getStatusCode();
         String body = responseUser.getBody().asString();
         assertThat(statusCode, equalTo(HttpStatus.SC_CREATED));
         @NonNull
         String userFirstName = from(body).get("user.firstName");
-        assertThat(userFirstName, equalTo("Luis35"));
+        assertThat(userFirstName, equalTo(userRequest.getFirstName()));
     }
 
     /*Post Login User*/
@@ -86,8 +88,8 @@ public class ThinkingTest extends BaseApi {
     @Story("Login User")
     @TmsLink("")
     public void loginUserWithValidCredentialsTest(){
-        PostLoginUserRequest loginUserRequest = new  PostLoginUserRequest("luis35@gmail.com", "myPassword");
-        Response responseLoginUser = genericPostLoginUserRequest(loginUserRequest, "users/login");
+        PostLoginUserRequest loginUserRequest = PostLoginUserFactory.defaultUser();
+        Response responseLoginUser = getResponsePostLoginUserRequest(loginUserRequest, "users/login");
 
         int statusCode = responseLoginUser.getStatusCode();
         assertThat(statusCode, equalTo(HttpStatus.SC_OK));
@@ -100,8 +102,8 @@ public class ThinkingTest extends BaseApi {
     @Story("Login User")
     @TmsLink("")
     public void loginUserWithInvalidCredentialsTest(){
-        PostLoginUserRequest loginUserRequest = new PostLoginUserRequest("luis351@gmail.com", "myPassword");
-        Response responseLoginUser = genericPostLoginUserRequest(loginUserRequest, "users/login");
+        PostLoginUserRequest invalidCredential = PostLoginUserFactory.invalidCredential();
+        Response responseLoginUser = getResponsePostLoginUserRequest(invalidCredential, "users/login");
 
         int statusCode = responseLoginUser.getStatusCode();
         assertThat(statusCode, equalTo(HttpStatus.SC_UNAUTHORIZED));
@@ -114,9 +116,9 @@ public class ThinkingTest extends BaseApi {
     @Story("Login User")
     @TmsLink("")
     public void verifyEmailWithValidCredentialsTest(){
-        PostLoginUserRequest loginUserRequest = new PostLoginUserRequest("luis35@gmail.com", "myPassword");
+        PostLoginUserRequest loginUserRequest = PostLoginUserFactory.defaultUser();
 
-        Response responseLoginUser = genericPostLoginUserRequest(loginUserRequest, "users/login");
+        Response responseLoginUser = getResponsePostLoginUserRequest(loginUserRequest, "users/login");
 
         int statusCode = responseLoginUser.getStatusCode();
         String body = responseLoginUser.getBody().asString();
@@ -124,7 +126,7 @@ public class ThinkingTest extends BaseApi {
         String userEmail = from(body).getString("user.email");
 
         assertThat(statusCode, equalTo(HttpStatus.SC_OK));
-        assertThat(userEmail, equalTo("luis35@gmail.com"));
+        assertThat(userEmail, equalTo(loginUserRequest.getEmail()));
     }
     /*Get User*/
     @Test
@@ -133,7 +135,7 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that user receives a status code 200 when sends a request with the valid token ")
     @Story("Get User")
     public void verifyStatusCode200WithValidCredentialsTest(){
-        Response response = genericGetRequest(getUserTokenFromLoginUser(), "users/me");
+        Response response = getResponseGetRequest(getUserTokenFromLoginUser(), "users/me");
         int statusCode = response.getStatusCode();
 
         assertThat(statusCode, equalTo(HttpStatus.SC_OK));
@@ -144,7 +146,7 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the user receives a status code 401 when  sends a request with the invalid token")
     @Story("Get User")
     public void verifyStatusCode401WithInvalidCredentialsTest(){
-        Response response = genericGetRequest(getUserTokenFromLoginUser()+"0", "users/me");
+        Response response = getResponseGetRequest(getUserTokenFromLoginUser()+"0", "users/me");
         int statusCode = response.getStatusCode();
 
         assertThat(statusCode, equalTo(HttpStatus.SC_UNAUTHORIZED));
@@ -156,7 +158,7 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the user receives a message when sends a request without the token")
     @Story("Get User")
     public void errorMessageWhenSendWithoutTokenTest(){
-        Response response = genericGetRequest("", "users/me");
+        Response response = getResponseGetRequest("", "users/me");
         int statusCode = response.getStatusCode();
         String body = response.getBody().asString();
         @NonNull
@@ -173,8 +175,8 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the user receive valid status code 201 when register a contact successfully")
     @Story("Post contact")
     public void addContactSuccessfullyTest(){
-        ContactRequest contactRequest = new ContactRequest("Diego", "Cadima", "1991/01/01", "diego@gmail.com", "74896512", "1524");
-        Response validateResponse =  genericMethodPostAddContact(getUserTokenFromLoginUser(), contactRequest, "contacts", HttpStatus.SC_CREATED);
+        ContactRequest contactRequest = ContactFactory.defaultInfoAccount();
+        Response validateResponse =  getResponsePostAddContact(getUserTokenFromLoginUser(), contactRequest, "contacts", HttpStatus.SC_CREATED);
         int statusCode = validateResponse.getStatusCode();
 
         assertThat(statusCode, equalTo(HttpStatus.SC_CREATED));
@@ -186,16 +188,16 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that user receive invalid status code 400 when register a contact with the mandatory fields empty")
     @Story("Post contact")
     public void errorMessageWhenSendMandatoryFieldsEmptyTest(){
-        ContactRequest contactRequest = new ContactRequest();
+        ContactRequest dataMissingContact = ContactFactory.missingAllInformation();
 
-        Response validateResponse = genericMethodPostAddContact(getUserTokenFromLoginUser(), contactRequest, "contacts", HttpStatus.SC_BAD_REQUEST);
+        Response validateResponse = getResponsePostAddContact(getUserTokenFromLoginUser(), dataMissingContact, "contacts", HttpStatus.SC_BAD_REQUEST);
         int statusCode = validateResponse.getStatusCode();
         String body = validateResponse.getBody().asString();
         @NonNull
-        String message = from(body).get("message");
+        String message = from(body).get("_message");
 
         assertThat(statusCode, equalTo(HttpStatus.SC_BAD_REQUEST));
-        assertThat(message, equalTo("Contact validation failed: firstName: Path `firstName` is required., lastName: Path `lastName` is required., birthdate: Birthdate is invalid, email: Expected a string but received a null, phone: Expected a string but received a null, postalCode: Expected a string but received a null"));
+        assertThat(message, equalTo("Contact validation failed"));
     }
 
     @Test
@@ -204,9 +206,9 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that user receive invalid status code 401 when use invalid token")
     @Story("Post contact")
     public void verifyResponseInAddContactWhenUseInvalidTokenTest(){
-        ContactRequest contactRequest = new ContactRequest("Diego", "Cadima", "1991/01/01", "diego@gmail.com", "74896512", "1524");
+        ContactRequest contactRequest = ContactFactory.defaultInfoAccount();
 
-        Response validateResponse = genericMethodPostAddContact(getUserTokenFromLoginUser()+"a", contactRequest, "contacts", HttpStatus.SC_UNAUTHORIZED);
+        Response validateResponse = getResponsePostAddContact(getUserTokenFromLoginUser()+"a", contactRequest, "contacts", HttpStatus.SC_UNAUTHORIZED);
         String body = validateResponse.getBody().asString();
         @NonNull
         String errorMessage = from(body).get("error");
@@ -219,13 +221,13 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the response contains the same birthdate as the contact registered")
     @Story("Post contact")
     public void getResponseWhenAddContactSuccessfullyTest(){
-        ContactRequest contactRequest = new ContactRequest("Richon", "Vidal", "1992-01-01", "richon@gmail.com", "74896512", "1524");
-        Response validateResponse = genericMethodPostAddContact(getUserTokenFromLoginUser(), contactRequest, "contacts", HttpStatus.SC_CREATED);
+        ContactRequest contactRequest = ContactFactory.defaultInfoAccount();
+        Response validateResponse = getResponsePostAddContact(getUserTokenFromLoginUser(), contactRequest, "contacts", HttpStatus.SC_CREATED);
 
         String  body = validateResponse.getBody().asString();
         @NonNull
         String contactBirthdate = from(body).get("birthdate");
-        assertThat(contactBirthdate, equalTo("1992-01-01"));
+        assertThat(contactBirthdate, equalTo(contactRequest.getBirthdate()));
     }
 
     /*GET CONTACT LIST */
@@ -235,8 +237,8 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Response status code 200 with valid token")
     @Description("Verify that user receives a status code 200 when sends a request  Contact list with  the valid token")
     @Story("Get contacts")
-    public void getContactListUserWithValidTokenTest() {
-        Response response = genericGetRequest(getUserTokenFromLoginUser(), "contacts");
+    public void getContactListUserWithValidTokenTest(){
+        Response response = getResponseGetRequest(getUserTokenFromLoginUser(), "contacts");
 
         int statusCode = response.getStatusCode();
         assertThat(statusCode, equalTo(HttpStatus.SC_OK));
@@ -247,8 +249,8 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Response status code 401 with invalid token")
     @Description("Verify that the user receives a status code 401 when sends a request  Contact list   invalid token.")
     @Story("Get contacts")
-    public void getInvalidStatusCodeWithInvalidTokenTest() {
-        Response response = genericGetRequest(getUserTokenFromLoginUser() + "0", "contacts");
+    public void getInvalidStatusCodeWithInvalidTokenTest(){
+        Response response = getResponseGetRequest(getUserTokenFromLoginUser() + "0", "contacts");
         int statusCode = response.getStatusCode();
 
         assertThat(statusCode, equalTo(HttpStatus.SC_UNAUTHORIZED));
@@ -259,8 +261,8 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Session number in contact is integer")
     @Description("Verify that the session number of a new contact is integer")
     @Story("Get contacts")
-    public void  verifyThatSessionNumberInContactIsIntegerTest() {
-        Response response = genericGetRequest(getUserTokenFromLoginUser(), "contacts");
+    public void  verifyThatSessionNumberInContactIsIntegerTest(){
+        Response response = getResponseGetRequest(getUserTokenFromLoginUser(), "contacts");
 
         String body = response.getBody().asString();
         @NonNull
@@ -275,8 +277,8 @@ public class ThinkingTest extends BaseApi {
     @DisplayName("Filter contact list")
     @Description("Verify that is possible to get all contact list information of user  using page filter")
     @Story("Get contacts")
-    public void  getAllContactListTest3() {
-        Response response = genericGetRequest(getUserTokenFromLoginUser(), "contacts");
+    public void  getAllContactListTest3(){
+        Response response = getResponseGetRequest(getUserTokenFromLoginUser(), "contacts");
 
         String body = response.getBody().asString();
 
@@ -293,9 +295,9 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the user  receives response  status code 200 when sends a request with a valid token.")
     @Story("Path user")
     public void verifyResponseStatus200WhenUpdateUserTest(){
-        UserRequest userRequest = new UserRequest("Luis Update", "Villa Update", "luis34@gmail.com","myPassword");
+        UserRequest userRequest = UserDataFactory.updateFirstName();
 
-        Response response = genericPathUserRequest(getUserTokenFromLoginUser(), userRequest, "/users/me");
+        Response response = getResponsePathUserRequest(getUserTokenFromLoginUser(), userRequest, "/users/me");
 
         int status = response.getStatusCode();
         assertThat(status, equalTo(HttpStatus.SC_OK));
@@ -307,13 +309,13 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the response json content the same first name that the user updated")
     @Story("Path user")
     public void UpdateUserFirstName(){
-        UserRequest userRequest = new UserRequest("Luis Alberto Update", "Villa Update", "luis34@gmail.com","myPassword");
-        Response response = genericPathUserRequest(getUserTokenFromLoginUser(), userRequest, "/users/me");
+        UserRequest userRequest = UserDataFactory.updateFirstName();
+        Response response = getResponsePathUserRequest(getUserTokenFromLoginUser(), userRequest, "/users/me");
 
         String body = response.getBody().asString();
         @NonNull
         String updateFirstName = from(body).get("firstName");
-        assertThat(updateFirstName, equalTo("Luis Alberto Update"));
+        assertThat(updateFirstName, equalTo(userRequest.getFirstName()));
     }
 
     @Test
@@ -322,12 +324,12 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the user receives json when sends a update with a valid token.")
     @Story("Path user")
     public void verifyResponseJsonIsNotNullTest(){
-        UserRequest userRequest = new UserRequest("Luis Alberto", "Villa Var Update", "luis34@gmail.com","myPassword");
-        Response response = genericPathUserRequest(getUserTokenFromLoginUser(), userRequest, "/users/me");
+        UserRequest userRequest = UserDataFactory.updateLastName();
+        Response response = getResponsePathUserRequest(getUserTokenFromLoginUser(), userRequest, "/users/me");
         @NonNull
         String body = response.getBody().asString();
         String updateFirstName = from(body).get("lastName");
-        assertThat(updateFirstName, equalTo("Villa Var Update"));
+        assertThat(updateFirstName, equalTo(userRequest.getLastName()));
     }
 
     @Test
@@ -336,8 +338,8 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the user receives response status code 401 when sends a request with a invalid token.")
     @Story("Path user")
     public void verifyStatusIs401WhenInvalidTokenTest(){
-        UserRequest userRequest = new UserRequest("Update", "Update", "luis34@gmail.com","myPassword");
-        Response response = genericPathUserRequest(getUserTokenFromLoginUser()+"0", userRequest, "/users/me");
+        UserRequest userRequest = UserDataFactory.defaultAccount();
+        Response response = getResponsePathUserRequest(getUserTokenFromLoginUser()+"0", userRequest, "/users/me");
         @NonNull
         int status = response.getStatusCode();
         assertThat(status, equalTo(HttpStatus.SC_UNAUTHORIZED));
@@ -349,8 +351,8 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the user receives a message when sends a request with an invalid  token.")
     @Story("Path user")
     public void verifyErrorMessageWhenInvalidTokenTest(){
-        UserRequest userRequest =  new UserRequest("Update", "Update", "luis34@gmail.com","myPassword");
-        Response response = genericPathUserRequest(getUserTokenFromLoginUser()+"0", userRequest, "/users/me");
+        UserRequest userRequest =  UserDataFactory.defaultAccount();
+        Response response = getResponsePathUserRequest(getUserTokenFromLoginUser()+"0", userRequest, "/users/me");
 
         String body = response.getBody().asString();
         @NonNull
@@ -365,7 +367,7 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that user authenticated receive response with status code 200 when logout with valid token")
     @Story("Post log out user")
     public void verifyStatusCode200WhenUseValidTokenTest(){
-        Response responseUser = genericMethodPostLogOutUser(getUserTokenFromLoginUser(), "users/logout");
+        Response responseUser = getResponsePostLogOutUser(getUserTokenFromLoginUser(), "users/logout");
         @NonNull
         int statusCode = responseUser.getStatusCode();
         assertThat(statusCode, equalTo(HttpStatus.SC_OK));
@@ -378,7 +380,7 @@ public class ThinkingTest extends BaseApi {
     @Story("Post log out user")
     public void verifyStatusCodeWhenUseInvalidTokenTest(){
 
-        Response responseUser = genericMethodPostLogOutUser(getUserTokenFromLoginUser()+"a", "users/logout");
+        Response responseUser = getResponsePostLogOutUser(getUserTokenFromLoginUser()+"a", "users/logout");
         @NonNull
         int statusCode = responseUser.getStatusCode();
         assertThat(statusCode, equalTo(HttpStatus.SC_UNAUTHORIZED));
@@ -390,7 +392,7 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the user receive a message when use an token empty for request logout")
     @Story("Post log out user")
     public void verifyIfReceiveErrorMessageWhenUseTokenEmptyTest(){
-        Response responseUser = genericMethodPostLogOutUser("", "users/logout");
+        Response responseUser = getResponsePostLogOutUser("", "users/logout");
         @NonNull
         int statusCode = responseUser.getStatusCode();
         String body = responseUser.getBody().asString();
@@ -409,15 +411,15 @@ public class ThinkingTest extends BaseApi {
     @Story("Put contact")
     public void verifyResponseStatus200WhenUpdateContactTest(){
         String token = getUserTokenFromLoginUser();
-        Response response = genericGetRequest(token, "contacts");
+        Response response = getResponseGetRequest(token, "contacts");
 
         String body = response.getBody().asString();
         String idContact = from(body).getString("[0]._id");
         assertThat(idContact, notNullValue());
 
-        ContactRequest contactRequest = new ContactRequest("Diego Update", "Vidal Update", "1992-01-01", "richonUpdate@gmail.com", "74896512", "1524");
+        ContactRequest contactRequest = ContactFactory.defaultInfoAccount();
 
-        Response responseUpdateContact = responseUpdateContact(contactRequest, token,"contacts/", idContact);
+        Response responseUpdateContact = getResponseUpdateContact(contactRequest, token,"contacts/", idContact);
         int status = responseUpdateContact.getStatusCode();
         assertThat(status, equalTo(HttpStatus.SC_OK));
     }
@@ -427,15 +429,15 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the user receives status code 401 when the Token  is empty.")
     @Story("Put contact")
     public void verifyResponseStatus401WhenEmptyTokenTest(){
-        Response response = genericGetRequest(getUserTokenFromLoginUser(), "contacts");
+        Response response = getResponseGetRequest(getUserTokenFromLoginUser(), "contacts");
 
         String body = response.getBody().asString();
         String idContact = from(body).getString("[0]._id");
         assertThat(idContact, notNullValue());
 
-        ContactRequest contactRequest = new ContactRequest("Diego", "Vidal", "1992-01-01", "richonUpdate@gmail.com", "74896512", "1524");
+        ContactRequest contactRequest = ContactFactory.defaultInfoAccount();
 
-        Response responseUpdateContact = responseUpdateContact(contactRequest, "","contacts/", idContact);
+        Response responseUpdateContact = getResponseUpdateContact(contactRequest, "","contacts/", idContact);
 
         int status = responseUpdateContact.getStatusCode();
         assertThat(status, equalTo(HttpStatus.SC_UNAUTHORIZED));
@@ -448,14 +450,14 @@ public class ThinkingTest extends BaseApi {
     @Story("Put contact")
     public void verifyResponseStatus400WhenInvalidIdTest(){
         String token = getUserTokenFromLoginUser();
-        Response response = genericGetRequest(token, "contacts");
+        Response response = getResponseGetRequest(token, "contacts");
 
         String body = response.getBody().asString();
         String idContact = from(body).getString("[0]._id");
         assertThat(idContact, notNullValue());
 
-        ContactRequest contactRequest = new ContactRequest("Diego", "Vidal", "1992-01-01", "richonUpdate@gmail.com", "74896512", "1524");
-        Response responseUpdateContact = responseUpdateContact(contactRequest, token,"contacts/", idContact+"0");
+        ContactRequest contactRequest = ContactFactory.defaultInfoAccount();
+        Response responseUpdateContact = getResponseUpdateContact(contactRequest, token,"contacts/", idContact+"0");
 
         int status = responseUpdateContact.getStatusCode();
         assertThat(status, equalTo(HttpStatus.SC_BAD_REQUEST));
@@ -470,12 +472,12 @@ public class ThinkingTest extends BaseApi {
     @Story("Delete a contact")
     public void deleteContactWithIdTest(){
         String token = getUserTokenFromLoginUser();
-        Response response = genericGetRequest(token, "contacts");
+        Response response = getResponseGetRequest(token, "contacts");
 
         String body = response.getBody().asString();
         String idContact = from(body).getString("[0]._id");
 
-        Response responseDeleteContact = responseDeleteContact(token, "contacts/", idContact);
+        Response responseDeleteContact = getResponseDeleteContact(token, "contacts/", idContact);
 
         int status = responseDeleteContact.getStatusCode();
         assertThat(status, equalTo(HttpStatus.SC_OK));
@@ -488,12 +490,12 @@ public class ThinkingTest extends BaseApi {
     @Story("Delete a contact")
     public void deleteContactWithoutTokenUserTest(){
         String token = getUserTokenFromLoginUser();
-        Response response = genericGetRequest(token, "contacts");
+        Response response = getResponseGetRequest(token, "contacts");
 
         String body = response.getBody().asString();
         String idContact = from(body).getString("[0]._id");
 
-        Response responseDeleteContact = responseDeleteContact("", "contacts/", idContact);
+        Response responseDeleteContact = getResponseDeleteContact("", "contacts/", idContact);
 
         int status = responseDeleteContact.getStatusCode();
         assertThat(status, equalTo(HttpStatus.SC_UNAUTHORIZED));
@@ -506,12 +508,12 @@ public class ThinkingTest extends BaseApi {
     @Story("Delete a contact")
     public void deleteContactWhitInvalidTokenUserTest(){
         String token = getUserTokenFromLoginUser();
-        Response response = genericGetRequest(token, "contacts");
+        Response response = getResponseGetRequest(token, "contacts");
 
         String body = response.getBody().asString();
         String idContact = from(body).getString("[0]._id");
 
-        Response responseDeleteContact = responseDeleteContact(token+"0", "contacts/", idContact);
+        Response responseDeleteContact = getResponseDeleteContact(token+"0", "contacts/", idContact);
 
         int status = responseDeleteContact.getStatusCode();
         assertThat(status, equalTo(HttpStatus.SC_UNAUTHORIZED));
@@ -524,9 +526,7 @@ public class ThinkingTest extends BaseApi {
     @Story("Delete a contact")
     public void deleteContactWithoutIdTest(){
         String token = getUserTokenFromLoginUser();
-        Response response = genericGetRequest(token, "contacts");
-
-        Response responseDeleteContact = responseDeleteContact(token, "contacts/", "");
+        Response responseDeleteContact = getResponseDeleteContact(token, "contacts/", "");
 
         int status = responseDeleteContact.getStatusCode();
         assertThat(status, equalTo(HttpStatus.SC_SERVICE_UNAVAILABLE));
@@ -539,10 +539,10 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the user receives status code 200 when sends a DELETE user request with a valid token")
     @Story("Delete user")
     public void deleteUserTest(){
-        UserRequest userRequest = new UserRequest("First Name Test", "Last Name Test", "testDelete@gmail.com", "myPassword");
+        UserRequest userRequest = UserDataFactory.validAccount();
 
-        Response responseUser = genericMethodPostAddUser(userRequest, "users");
-
+        Response responseUser = getResponsePostAddUser(userRequest, "users");
+        @NonNull
         int statusCodeCreate = responseUser.getStatusCode();
         String body = responseUser.getBody().asString();
 
@@ -550,7 +550,7 @@ public class ThinkingTest extends BaseApi {
         @NonNull
         String token = from(body).get("token");
 
-        Response response = responseDeleteUser(token, "/users/me");
+        Response response = getResponseDeleteUser(token, "/users/me");
         int statusCodeDelete = response.getStatusCode();
         assertThat(statusCodeDelete, equalTo(HttpStatus.SC_OK));
     }
@@ -561,7 +561,7 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the user receives status code 401 when sends DELETE user request with a invalid token")
     @Story("Delete user")
     public void deleteUserWithInvalidTokenTest(){
-        Response response = responseDeleteUser(getUserTokenFromLoginUser()+"0", "/users/me");
+        Response response = getResponseDeleteUser(getUserTokenFromLoginUser()+"0", "/users/me");
         int statusCode = response.getStatusCode();
         assertThat(statusCode, equalTo(HttpStatus.SC_UNAUTHORIZED));
     }
@@ -572,13 +572,13 @@ public class ThinkingTest extends BaseApi {
     @Description("Verify that the user receives status code 401 when sends DELETE user request with empty token")
     @Story("Delete user")
     public void deleteUserWhitEmptyTokenTest(){
-        Response response = responseDeleteUser("", "/users/me");
+        Response response = getResponseDeleteUser("", "/users/me");
         int statusCode = response.getStatusCode();
         assertThat(statusCode, equalTo(HttpStatus.SC_UNAUTHORIZED));
     }
-    /*Generic Method*/
+    /*Reuse Method*/
     //AddUser
-    private Response genericMethodPostAddUser(UserRequest userRequest, String path) {
+    private Response getResponsePostAddUser(UserRequest userRequest, String path) {
         Response response = given()
                 .contentType(ContentType.JSON)
                 .body(userRequest)
@@ -586,7 +586,7 @@ public class ThinkingTest extends BaseApi {
         return response;
     }
     //LoginUser
-    private Response genericPostLoginUserRequest(PostLoginUserRequest loginUserRequest, String path){
+    private Response getResponsePostLoginUserRequest(PostLoginUserRequest loginUserRequest, String path){
         Response response = given()
                 .contentType(ContentType.JSON)
                 .body(loginUserRequest)
@@ -595,7 +595,7 @@ public class ThinkingTest extends BaseApi {
         return response;
     }
     //GetUser
-    private Response genericGetRequest(String token, String path){
+    private Response getResponseGetRequest(String token, String path){
         Response response = given()
                 .auth()
                 .oauth2(token)
@@ -604,7 +604,7 @@ public class ThinkingTest extends BaseApi {
         return response;
     }
     //PathUser
-    private Response genericPathUserRequest(String token, UserRequest userRequest, String path){
+    private Response getResponsePathUserRequest(String token, UserRequest userRequest, String path){
         Response response = given()
                 .auth()
                 .oauth2(token)
@@ -614,7 +614,7 @@ public class ThinkingTest extends BaseApi {
         return response;
     }
     //Log out User
-    private Response genericMethodPostLogOutUser(String token, String path) {
+    private Response getResponsePostLogOutUser(String token, String path) {
         Response response = given()
                 .auth()
                 .oauth2(token)
@@ -623,7 +623,7 @@ public class ThinkingTest extends BaseApi {
     }
 
     //Contact
-    private Response genericMethodPostAddContact(String token, ContactRequest contactRequest, String request, int codeStatus) {
+    private Response getResponsePostAddContact(String token, ContactRequest contactRequest, String request, int codeStatus) {
         Response response =  given()
                 .auth()
                 .oauth2(token)
@@ -633,20 +633,20 @@ public class ThinkingTest extends BaseApi {
         return response;
     }
     //GetToken
-    private String getUserTokenFromLoginUser(){
-        PostLoginUserRequest loginUserRequest = new PostLoginUserRequest("luis34@gmail.com", "myPassword");
+    private String getUserTokenFromLoginUser() {
+        PostLoginUserRequest loginUserRequest = PostLoginUserFactory.defaultUser();
 
-        Response responseLoginUser = genericPostLoginUserRequest(loginUserRequest, "users/login");
+        Response responseLoginUser = getResponsePostLoginUserRequest(loginUserRequest, "users/login");
 
         String body = responseLoginUser.getBody().asString();
+        @NonNull
         String userToken = from(body).getString("token");
-        assertThat(userToken, notNullValue());
 
         return userToken;
     }
 
     //PUT CONTACT
-    private Response responseUpdateContact(ContactRequest requestJson, String token, String path, String idContact){
+    private Response getResponseUpdateContact(ContactRequest requestJson, String token, String path, String idContact){
         Response response = given()
                 .auth()
                 .oauth2(token)
@@ -657,7 +657,7 @@ public class ThinkingTest extends BaseApi {
     }
 
     //Delete contact
-    public Response responseDeleteContact(String token, String path, String idContact){
+    public Response getResponseDeleteContact(String token, String path, String idContact){
         Response response = given()
                 .auth()
                 .oauth2(token)
@@ -666,7 +666,7 @@ public class ThinkingTest extends BaseApi {
         return response;
     }
     //Delete User
-    public Response responseDeleteUser(String token, String path){
+    public Response getResponseDeleteUser(String token, String path){
         Response response = given()
                 .auth()
                 .oauth2(token)
