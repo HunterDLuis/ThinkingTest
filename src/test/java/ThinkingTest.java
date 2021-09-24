@@ -24,7 +24,7 @@ public class ThinkingTest extends BaseApi {
     /*POST Add User*/
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Post add user response 201")
+    @DisplayName("Post add user - Status code 201 when user is registered.")
     @Description("Verify that the user receives status code 201 when their register is successful.")
     @Story("Add User")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-1")
@@ -43,8 +43,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Post add user response 400")
-    @Description("Verify that the user receive status code 400 when user register with mandatory fields empty")
+    @DisplayName("Post add user - response status code 400 when send empty mandatory fields")
+    @Description("Verify that the user receives status code 400 when register with empty mandatory fields in add user request")
     @Story("Add User")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-2")
     public void matchMessageAndStatusCode400WhenMandatoryFieldsEmptyTest(){
@@ -64,7 +64,7 @@ public class ThinkingTest extends BaseApi {
     @Test
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Post add user - verify firstName")
-    @Description("Verify that the json response contains the same firstName that the user registered ")
+    @Description("Verify that json response contains the same firstName that the user has been registered in add user request")
     @Story("Add User")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-3")
     public void matchFirsNameWhenAddUserSuccessfullyTest(){
@@ -82,9 +82,9 @@ public class ThinkingTest extends BaseApi {
 
     /*Post Login User*/
     @Test
-    @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Post login user with valid credentials")
-    @Description("Verify that user receives a status code 200  when request login with valid Credentials")
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("Post login user- Status code 401 when send with invalid credentials")
+    @Description("Verify that user receives a status code 401 when sends login request with invalid Credentials")
     @Story("Login User")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-4")
     public void loginUserWithValidCredentialsTest(){
@@ -112,7 +112,7 @@ public class ThinkingTest extends BaseApi {
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Post login user - Verify user email")
-    @Description("Verify that Json response contains the same email  that the user entered.")
+    @Description("Verify that Json response contains the same email  that the user entered when sends login request.")
     @Story("Login User")
     @TmsLink("testlink/linkto.php?tprojectPrefix=TT&item=testcase&id=TT-6")
     public void verifyEmailWithValidCredentialsTest(){
@@ -131,8 +131,8 @@ public class ThinkingTest extends BaseApi {
     /*Get User*/
     @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Get user with valid token")
-    @Description("Verify that user receives a status code 200 when sends a request with the valid token ")
+    @DisplayName("Get user - Status code 200 when send with valid token")
+    @Description("Verify that user receives a status code 200 when sends get user request with the valid token ")
     @Story("Get User")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-7")
     public void verifyStatusCode200WithValidCredentialsTest(){
@@ -143,8 +143,8 @@ public class ThinkingTest extends BaseApi {
     }
     @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Get user with invalid token")
-    @Description("Verify that the user receives a status code 401 when  sends a request with the invalid token")
+    @DisplayName("Get user - Status code 401 when send with invalid token")
+    @Description("Verify that the user receives a status code 401 when  sends get user request with the invalid token")
     @Story("Get User")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-8")
     public void verifyStatusCode401WithInvalidCredentialsTest(){
@@ -156,7 +156,7 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Receives error message when send token empty")
+    @DisplayName("Get user - Receives error message when send token empty")
     @Description("Verify that the user receives a message when sends a request without the token")
     @Story("Get User")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-9")
@@ -174,8 +174,8 @@ public class ThinkingTest extends BaseApi {
     /*POST Add Contact*/
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Add contact successfully")
-    @Description("Verify that the user receive valid status code 201 when register a contact successfully")
+    @DisplayName("Post contact - Status code 201 when add contact successfully")
+    @Description("Verify that the user receives  status code 201 when a contact is registered  successfully")
     @Story("Post contact")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-10")
     public void addContactSuccessfullyTest(){
@@ -188,8 +188,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Error message and status code 400 when mandatory fields empty")
-    @Description("Verify that user receive invalid status code 400 when register a contact with the mandatory fields empty")
+    @DisplayName("Post contact - Error message and status code 400 when mandatory fields empty")
+    @Description("Verify that user receives status code 400 when the mandatory fields of register contact are empty")
     @Story("Post contact")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-11")
     public void errorMessageWhenSendMandatoryFieldsEmptyTest(){
@@ -207,8 +207,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Error message when send invalid token")
-    @Description("Verify that user receive invalid status code 401 when use invalid token")
+    @DisplayName("Post contact - Error message when send invalid token")
+    @Description("Verify that user receives  status code 401 when sends contact request with invalid token")
     @Story("Post contact")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-12")
     public void verifyResponseInAddContactWhenUseInvalidTokenTest(){
@@ -223,8 +223,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.MINOR)
-    @DisplayName("Response json contain the same birthdate")
-    @Description("Verify that the response contains the same birthdate as the contact registered")
+    @DisplayName("Post Contact - Response json contain the same birthdate")
+    @Description("Verify that the response contains the same birthdate as the contact has been registered in add contact request")
     @Story("Post contact")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-13")
     public void getResponseWhenAddContactSuccessfullyTest(){
@@ -241,8 +241,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Response status code 200 with valid token")
-    @Description("Verify that user receives a status code 200 when sends a request  Contact list with  the valid token")
+    @DisplayName("Get contact - status code 200 with valid token")
+    @Description("Verify that user receives a status code 200 when sends get contact list request with  the valid token")
     @Story("Get contacts")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-14")
     public void getContactListUserWithValidTokenTest(){
@@ -254,8 +254,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Response status code 401 with invalid token")
-    @Description("Verify that the user receives a status code 401 when sends a request  Contact list   invalid token.")
+    @DisplayName("Get contact - status code 401 with invalid token")
+    @Description("Verify that the user receives a status code 401 when sends get contact list request  with  invalid token.")
     @Story("Get contacts")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-15")
     public void getInvalidStatusCodeWithInvalidTokenTest(){
@@ -267,8 +267,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.MINOR)
-    @DisplayName("Session number in contact is integer")
-    @Description("Verify that the session number of a new contact is integer")
+    @DisplayName("Get contact - Session number in contact is integer")
+    @Description("Verify that the session number of a new contact is integer when sends get contact request")
     @Story("Get contacts")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-16")
     public void  verifyThatSessionNumberInContactIsIntegerTest(){
@@ -285,8 +285,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.MINOR)
-    @DisplayName("Filter contact list")
-    @Description("Verify that is possible to get all contact list information of user  using page filter")
+    @DisplayName("Get contact - Filter contact list")
+    @Description("Verify that user can filter all contacts that it has country equal USA ")
     @Story("Get contacts")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-17")
     public void  getAllContactListTest3(){
@@ -303,9 +303,9 @@ public class ThinkingTest extends BaseApi {
     /*PATH user*/
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Status code 200 when update user first name")
-    @Description("Verify that the user  receives response  status code 200 when sends a request with a valid token.")
-    @Story("Path user")
+    @DisplayName("Patch user - Status code 200 when update user first name")
+    @Description("Verify that the user  receives status code 200 when sends a path user request with a valid token.")
+    @Story("Patch user")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-18")
     public void verifyResponseStatus200WhenUpdateUserTest(){
         UserRequest userRequest = UserDataFactory.updateFirstName();
@@ -318,9 +318,9 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Match user first name with valid token")
-    @Description("Verify that the response json content the same first name that the user updated")
-    @Story("Path user")
+    @DisplayName("Patch user - Match user first name with valid token")
+    @Description("Verify that the response json contents the same first name that the user updated when sends path user request")
+    @Story("Patch user")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-19")
     public void UpdateUserFirstName(){
         UserRequest userRequest = UserDataFactory.updateFirstName();
@@ -334,9 +334,9 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Response json is not null")
-    @Description("Verify that the user receives json when sends a update with a valid token.")
-    @Story("Path user")
+    @DisplayName("Patch user - Response json is not null")
+    @Description("Verify that the user receives json when sends path user request with valid token.")
+    @Story("Patch user")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-20")
     public void verifyResponseJsonIsNotNullTest(){
         UserRequest userRequest = UserDataFactory.updateLastName();
@@ -349,9 +349,9 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Status code 401 when send invalid token")
-    @Description("Verify that the user receives response status code 401 when sends a request with a invalid token.")
-    @Story("Path user")
+    @DisplayName("Patch user-Status code 401 when send invalid token")
+    @Description("Verify that the user receives  status code 401 when sends path user request with a invalid token.")
+    @Story("Patch user")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-21")
     public void verifyStatusIs401WhenInvalidTokenTest(){
         UserRequest userRequest = UserDataFactory.defaultAccount();
@@ -363,9 +363,9 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Error message when send invalid token")
+    @DisplayName("Patch user -Error message when send invalid token")
     @Description("Verify that the user receives a message when sends a request with an invalid  token.")
-    @Story("Path user")
+    @Story("Patch user")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-22")
     public void verifyErrorMessageWhenInvalidTokenTest(){
         UserRequest userRequest =  UserDataFactory.defaultAccount();
@@ -380,8 +380,8 @@ public class ThinkingTest extends BaseApi {
     /*POST Log out User*/
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Status code 200 when use valid token")
-    @Description("Verify that user authenticated receive response with status code 200 when logout with valid token")
+    @DisplayName("Post log out user - Status code 200 when use valid token")
+    @Description("Verify that user authenticated receives status code 200 when logout with valid token")
     @Story("Post log out user")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-23")
     public void verifyStatusCode200WhenUseValidTokenTest(){
@@ -393,8 +393,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Status code 401 when use invalid token")
-    @Description("Verify that user receives a status code 401 when request logout with invalid token")
+    @DisplayName("Post log out user - Status code 401 when use invalid token")
+    @Description("Verify that user receives a status code 401 when sends log out request  with invalid token")
     @Story("Post log out user")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-24")
     public void verifyStatusCodeWhenUseInvalidTokenTest(){
@@ -407,8 +407,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.MINOR)
-    @DisplayName("Error message when use token empty")
-    @Description("Verify that the user receive a message when use an token empty for request logout")
+    @DisplayName("Post log out user - Error message when use empty")
+    @Description("Verify that the user receives a message when use an empty token for request logout")
     @Story("Post log out user")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-25")
     public void verifyIfReceiveErrorMessageWhenUseTokenEmptyTest(){
@@ -426,8 +426,8 @@ public class ThinkingTest extends BaseApi {
     /*PUT CONTACT*/
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Statud code 200 when updated a contact")
-    @Description("Verify that the user receives status code 200 when the request update is successful.")
+    @DisplayName("Put contact- Status code 200 when updated a contact")
+    @Description("Verify that the user receives status code 200 when  put contact request is successful.")
     @Story("Put contact")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-26")
     public void verifyResponseStatus200WhenUpdateContactTest(){
@@ -446,8 +446,8 @@ public class ThinkingTest extends BaseApi {
     }
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Status code 401 when token is empty")
-    @Description("Verify that the user receives status code 401 when the Token  is empty.")
+    @DisplayName("Put contact - Status code 401 when token is empty")
+    @Description("Verify that the user receives status code 401 when sends put contact request with empty token.")
     @Story("Put contact")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-27")
     public void verifyResponseStatus401WhenEmptyTokenTest(){
@@ -467,7 +467,7 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Status code 400 when invalid id")
+    @DisplayName("Put contact-Status code 400 when invalid id")
     @Description("Verify that the user receives status code 400 when the Id  is invalid.")
     @Story("Put contact")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-28")
@@ -510,7 +510,7 @@ public class ThinkingTest extends BaseApi {
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Delete contact - Status code 401 whit valid id")
-    @Description("Verify that the user receives status code 401 if request delete a contact with a empty token")
+    @Description("Verify that the user receives status code 401 when sends delete contact request with empty token")
     @Story("Delete a contact")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-33")
     public void deleteContactWithoutTokenUserTest(){
@@ -528,8 +528,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Delete contact - Status code 401 whit invalid token")
-    @Description("Verify that the user receives  status code 401 if requested to delete a contact  with invalid token.")
+    @DisplayName("Delete contact - Status code 401 with invalid token")
+    @Description("Verify that the user receives  status code 401 when sends delete contact request with invalid token.")
     @Story("Delete a contact")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-34")
     public void deleteContactWhitInvalidTokenUserTest(){
@@ -547,8 +547,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Delete contact- Status code 503 whit empty id")
-    @Description("Verify that the user receives  status code 503 if requested to delete a contact  with empty id.")
+    @DisplayName("Delete contact- Status code 503 with empty id")
+    @Description("Verify that the user receives  status code 503 when sends delete contact request with empty id.")
     @Story("Delete a contact")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-35")
     public void deleteContactWithoutIdTest(){
@@ -562,8 +562,8 @@ public class ThinkingTest extends BaseApi {
     /*Delete User*/
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Delete User - Status code 200 whit a valid token")
-    @Description("Verify that the user receives status code 200 when sends a DELETE user request with a valid token")
+    @DisplayName("Delete User - Status code 200 with a valid token")
+    @Description("Verify that the user receives status code 200 when sends delete user request with a valid token")
     @Story("Delete user")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-29")
     public void deleteUserTest(){
@@ -585,8 +585,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Delete User - Status code 401 whit a invalid token")
-    @Description("Verify that the user receives status code 401 when sends DELETE user request with a invalid token")
+    @DisplayName("Delete User - Status code 401 with a invalid token")
+    @Description("Verify that the user receives status code 401 when sends delete user request with a invalid token")
     @Story("Delete user")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-30")
     public void deleteUserWithInvalidTokenTest(){
@@ -597,8 +597,8 @@ public class ThinkingTest extends BaseApi {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Delete User - Status code 401 whit empty token")
-    @Description("Verify that the user receives status code 401 when sends DELETE user request with empty token")
+    @DisplayName("Delete User - Status code 401 with empty token")
+    @Description("Verify that the user receives status code 401 when sends delete user request with empty token")
     @Story("Delete user")
     @TmsLink("linkto.php?tprojectPrefix=TT&item=testcase&id=TT-31")
     public void deleteUserWhitEmptyTokenTest(){
